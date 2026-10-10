@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bt8mo5dbelmf7"]
 
-[ext_resource type="Script" uid="uid://phkco4yutgq5" path="res://enemy.gd" id="1_7k104"]
-[ext_resource type="Texture2D" uid="uid://br12ykw24e6ql" path="res://pirate-ship-clip-art-1-2726867826.png" id="2_4gyqm"]
+[ext_resource type="Script" uid="uid://phkco4yutgq5" path="res://Scripts/enemy.gd" id="1_1f0kj"]
+[ext_resource type="Texture2D" uid="uid://br12ykw24e6ql" path="res://Sprites/pirate-ship-clip-art-1-2726867826.png" id="2_afpow"]
 
 [node name="Enemy" type="Node2D" unique_id=282441340]
-script = ExtResource("1_7k104")
+script = ExtResource("1_1f0kj")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1764730047]
 offset_top = 1.0
@@ -14,7 +14,7 @@ offset_bottom = 255.0
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=1436865980]
 layout_mode = 2
 size_flags_vertical = 0
-texture = ExtResource("2_4gyqm")
+texture = ExtResource("2_afpow")
 expand_mode = 5
 stretch_mode = 4
 

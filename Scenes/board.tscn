@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dxwoxvy4rqf1l"]
 
-[ext_resource type="Script" uid="uid://dgqif6xctajgt" path="res://board.gd" id="1_8l818"]
-[ext_resource type="Texture2D" uid="uid://bv6goo0va66f4" path="res://atlantic-ocean-1-3543557584.jpg" id="2_psm7c"]
-[ext_resource type="PackedScene" uid="uid://bt8mo5dbelmf7" path="res://enemy.tscn" id="3_8l818"]
+[ext_resource type="Script" uid="uid://dgqif6xctajgt" path="res://Scripts/board.gd" id="1_8l818"]
+[ext_resource type="Texture2D" uid="uid://0cc8ivxsfukj" path="res://Sprites/atlantic-ocean-1-3543557584.jpg" id="2_8l818"]
+[ext_resource type="PackedScene" uid="uid://bt8mo5dbelmf7" path="res://Scenes/enemy.tscn" id="3_8l818"]
 
 [node name="Board" type="Node2D" unique_id=687119862]
 script = ExtResource("1_8l818")
@@ -13,7 +13,7 @@ position = Vector2(564, 524)
 [node name="Background" type="Sprite2D" parent="." unique_id=1389736538]
 position = Vector2(595, 375.00006)
 scale = Vector2(0.5180556, 0.6783565)
-texture = ExtResource("2_psm7c")
+texture = ExtResource("2_8l818")
 
 [node name="Enemy" parent="." unique_id=282441340 instance=ExtResource("3_8l818")]
 position = Vector2(459, 82)

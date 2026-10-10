@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cy7ha4o36rnqb"]
 
-[ext_resource type="Script" uid="uid://bjc4nusp2hnn" path="res://start_button.gd" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://bjc4nusp2hnn" path="res://Scripts/start_button.gd" id="1_1rerr"]
 
 [node name="Menu" type="Control" unique_id=1739026939]
 layout_mode = 3
@@ -28,4 +28,4 @@ grow_vertical = 2
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 text = "START"
-script = ExtResource("1_lti8b")
+script = ExtResource("1_1rerr")
