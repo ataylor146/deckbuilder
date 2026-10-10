@@ -17,3 +17,5 @@ texture = ExtResource("2_8l818")
 
 [node name="Enemy" parent="." unique_id=282441340 instance=ExtResource("3_8l818")]
 position = Vector2(459, 82)
+
+[connection signal="defeated" from="Enemy" to="." method="_on_enemy_defeated"]

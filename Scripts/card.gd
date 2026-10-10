@@ -4,8 +4,6 @@ extends Button
 signal cardPlaced(Card)
 signal doDamage(amount:int)
 
-const MOVE_RATE := 1 # ms to clear half dist (lower is faster)
-
 var grabPos : Vector2
 var formerPos : Vector2
 var formerZ: int

@@ -9,7 +9,7 @@ var cardsInHand: Array[Node]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	$Enemy.setup(load("res://enemies/skipper.tres"))
 
 func handPositions(count: int) -> Array[Vector2]:
 	var result: Array[Vector2]
@@ -54,5 +54,8 @@ func _on_card_card_placed(card:Node) -> void:
 		cardsInHand.erase(card)
 
 func _damage_enemy(amount:int) -> void:
-	
 	$Enemy.take_damage(amount)
+
+func _on_enemy_defeated() -> void:
+	print("enemy down!")
+	$Enemy.setup(load("res://enemies/skipper.tres"))

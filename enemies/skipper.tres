@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://nvryu46lha51"]
+
+[ext_resource type="Script" uid="uid://bqfmiitgp161m" path="res://Scripts/enemy_data.gd" id="1_lw4kj"]
+
+[resource]
+script = ExtResource("1_lw4kj")
+name = "Skipper"
+health = 20
+damage = 5
+metadata/_custom_type_script = "uid://bqfmiitgp161m"
