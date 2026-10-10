@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dvyapjprf86ox"]
+
+[ext_resource type="PackedScene" uid="uid://bt8mo5dbelmf7" path="res://enemy.tscn" id="1_g4qto"]
+[ext_resource type="Texture2D" uid="uid://ds76jbuigsfso" path="res://icon.svg" id="2_61od6"]
+[ext_resource type="PackedScene" uid="uid://badu7qssc7g76" path="res://player.tscn" id="2_hr5et"]
+
+[node name="MainScene" type="Node2D" unique_id=1291007654]
+position = Vector2(575, 277)
+
+[node name="Enemy" parent="." unique_id=282441340 instance=ExtResource("1_g4qto")]
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy" unique_id=739728193]
+position = Vector2(137, -5)
+texture = ExtResource("2_61od6")
+
+[node name="EnemyHP" type="ProgressBar" parent="Enemy" unique_id=1716306637]
+offset_left = 46.0
+offset_top = 84.0
+offset_right = 230.0
+offset_bottom = 111.0
+step = 1.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Enemy/EnemyHP" unique_id=1115382004]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "5 HP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Enemy" unique_id=2081927715]
+offset_left = 75.0
+offset_top = 59.0
+offset_right = 193.0
+offset_bottom = 82.0
+text = "ENEMY's NAME"
+
+[node name="Player" parent="." unique_id=499854778 instance=ExtResource("2_hr5et")]
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1447851149]
+position = Vector2(-136, -6)
+texture = ExtResource("2_61od6")
+
+[node name="PlayerHP" type="Label" parent="Player" unique_id=2078287131]
+offset_left = -166.0
+offset_top = 70.0
+offset_right = -112.0
+offset_bottom = 93.0
+text = "HP 100"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="." unique_id=481977829]
+offset_left = -76.0
+offset_top = 153.0
+offset_right = 59.0
+offset_bottom = 184.0
+text = "DAMAGE ENEMY"
