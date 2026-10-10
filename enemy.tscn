@@ -1,6 +1,42 @@
 [gd_scene format=3 uid="uid://bt8mo5dbelmf7"]
 
 [ext_resource type="Script" uid="uid://phkco4yutgq5" path="res://enemy.gd" id="1_7k104"]
+[ext_resource type="Texture2D" uid="uid://br12ykw24e6ql" path="res://pirate-ship-clip-art-1-2726867826.png" id="2_4gyqm"]
 
 [node name="Enemy" type="Node2D" unique_id=282441340]
 script = ExtResource("1_7k104")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1764730047]
+offset_top = 1.0
+offset_right = 269.0
+offset_bottom = 255.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=1436865980]
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("2_4gyqm")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Name" type="Label" parent="VBoxContainer" unique_id=429733419]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Example"
+horizontal_alignment = 1
+
+[node name="HP" type="ProgressBar" parent="VBoxContainer" unique_id=495493396]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 8
+show_percentage = false
+
+[node name="Label" type="Label" parent="VBoxContainer/HP" unique_id=70410804]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_right = 5.0
+grow_horizontal = 2
+grow_vertical = 2
