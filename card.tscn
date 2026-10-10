@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cym8iwdl4ksea"]
+
+[ext_resource type="Script" uid="uid://n5t8ijhylxrg" path="res://card.gd" id="1_rjlel"]
+[ext_resource type="Texture2D" uid="uid://ds76jbuigsfso" path="res://icon.svg" id="2_q5obu"]
+
+[node name="Card" type="Button" unique_id=1031192252]
+offset_right = 183.0
+offset_bottom = 362.0
+script = ExtResource("1_rjlel")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1402898731]
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 359.0
+texture = ExtResource("2_q5obu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=81723631]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=473830345]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1215540588]
+layout_mode = 2
+text = "Card Title"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=73882550]
+layout_mode = 2
+texture = ExtResource("2_q5obu")
+
+[node name="Description" type="Label" parent="VBoxContainer" unique_id=943365374]
+layout_mode = 2
+text = "Card description
+lorem ipsum dolor
+sit amet
+blah"
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]
