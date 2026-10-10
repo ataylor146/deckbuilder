@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://dxwoxvy4rqf1l"]
 
 [ext_resource type="Script" uid="uid://dgqif6xctajgt" path="res://Scripts/board.gd" id="1_8l818"]
-[ext_resource type="Texture2D" uid="uid://0cc8ivxsfukj" path="res://Sprites/atlantic-ocean-1-3543557584.jpg" id="2_8l818"]
+[ext_resource type="Texture2D" uid="uid://dn14lajsy6sgk" path="res://Sprites/ocean.jpg" id="2_shhme"]
 [ext_resource type="PackedScene" uid="uid://bt8mo5dbelmf7" path="res://Scenes/enemy.tscn" id="3_8l818"]
+[ext_resource type="PackedScene" uid="uid://bcourr8d2yg0u" path="res://Scenes/cannon.tscn" id="4_shhme"]
 
 [node name="Board" type="Node2D" unique_id=687119862]
 script = ExtResource("1_8l818")
@@ -11,11 +12,33 @@ script = ExtResource("1_8l818")
 position = Vector2(564, 524)
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1389736538]
-position = Vector2(595, 375.00006)
-scale = Vector2(0.5180556, 0.6783565)
-texture = ExtResource("2_8l818")
+position = Vector2(599, 209.00002)
+scale = Vector2(0.41928536, 0.41928533)
+texture = ExtResource("2_shhme")
 
 [node name="Enemy" parent="." unique_id=282441340 instance=ExtResource("3_8l818")]
-position = Vector2(459, 82)
+
+[node name="Cannon" parent="." unique_id=1691383367 instance=ExtResource("4_shhme")]
+position = Vector2(170, 489)
+
+[node name="Cannon2" parent="." unique_id=887126168 instance=ExtResource("4_shhme")]
+position = Vector2(627, 442)
+loadedMunition = 2
+
+[node name="Cannon3" parent="." unique_id=575758701 instance=ExtResource("4_shhme")]
+position = Vector2(994, 436)
+loadedMunition = 0
+
+[node name="Cannon4" parent="." unique_id=1549919177 instance=ExtResource("4_shhme")]
+position = Vector2(700, 86)
+opposing = true
+
+[node name="Cannon5" parent="." unique_id=997904421 instance=ExtResource("4_shhme")]
+position = Vector2(1079, 106)
+opposing = true
+
+[node name="Cannon6" parent="." unique_id=1239653606 instance=ExtResource("4_shhme")]
+position = Vector2(322, 88)
+opposing = true
 
 [connection signal="defeated" from="Enemy" to="." method="_on_enemy_defeated"]

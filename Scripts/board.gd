@@ -4,8 +4,10 @@ const handWidth := 300.0
 const typicalHandSpread := 50.0
 
 var n_card:PackedScene =  load("res://Scenes/card.tscn")
+var n_cannon:PackedScene = load("res://Scenes/cannon.tscn")
 
-var cardsInHand: Array[Node]
+var cardsInHand: Array[Card]
+var cannons: Array[Cannon]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
