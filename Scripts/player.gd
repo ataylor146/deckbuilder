@@ -15,7 +15,6 @@ func test_damage():
 		take_damage(1)
 
 func take_damage(dmg: int) -> void:
-	# Броня поглощает урон первой и тратится
 	var absorbed = min(block, dmg)
 	block -= absorbed
 	dmg -= absorbed

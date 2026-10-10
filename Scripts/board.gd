@@ -3,7 +3,7 @@ extends Node2D
 const handWidth := 300.0
 const typicalHandSpread := 50.0
 
-var n_card:PackedScene =  load("res://card.tscn")
+var n_card:PackedScene =  load("res://Scenes/card.tscn")
 
 var cardsInHand: Array[Node]
 
@@ -29,6 +29,7 @@ func arrangeHand() -> void:
 		cardsInHand[i].homePosition = positions[i]
 
 func drawCard(data:CardData):
+
 	var newCard:Card = n_card.instantiate()
 	newCard.setup(data)
 	cardsInHand.append(newCard)
