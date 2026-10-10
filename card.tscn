@@ -4,14 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://ds76jbuigsfso" path="res://icon.svg" id="2_q5obu"]
 
 [node name="Card" type="Button" unique_id=1031192252]
-offset_right = 183.0
-offset_bottom = 362.0
+offset_right = 156.0
+offset_bottom = 283.0
 script = ExtResource("1_rjlel")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1402898731]
 layout_mode = 0
-offset_right = 180.0
-offset_bottom = 359.0
+offset_right = 159.0
+offset_bottom = 287.0
 texture = ExtResource("2_q5obu")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=81723631]
@@ -26,9 +26,11 @@ layout_mode = 2
 layout_mode = 2
 text = "Card Title"
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=73882550]
+[node name="Art" type="TextureRect" parent="VBoxContainer" unique_id=73882550]
 layout_mode = 2
 texture = ExtResource("2_q5obu")
+expand_mode = 5
+stretch_mode = 4
 
 [node name="Description" type="Label" parent="VBoxContainer" unique_id=943365374]
 layout_mode = 2

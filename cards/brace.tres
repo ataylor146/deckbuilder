@@ -1,12 +1,11 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dqgo6p3kvk5jn"]
 
+[ext_resource type="Texture2D" uid="uid://bk3kxd6e6wtwn" path="res://cannonball_PNG18-2072353241.png" id="1_4op2w"]
 [ext_resource type="Script" uid="uid://d35b34pvlmmfk" path="res://card_data.gd" id="1_cd"]
 
 [resource]
 script = ExtResource("1_cd")
 cardName = "Brace"
-description = ""
 cardType = 1
-manaCost = 1
 amount = 5
-effect = 0
+art = ExtResource("1_4op2w")

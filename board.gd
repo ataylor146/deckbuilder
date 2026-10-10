@@ -28,10 +28,14 @@ func arrangeHand() -> void:
 	for i in range(cardsInHand.size()):
 		cardsInHand[i].homePosition = positions[i]
 
-func drawCard(card:PackedScene):
-	var newCard = card.instantiate()
+func drawCard(data:CardData):
+	var newCard:Card = n_card.instantiate()
+	newCard.setup(data)
 	cardsInHand.append(newCard)
+	
 	add_child(newCard)
+	newCard.cardPlaced.connect(_on_card_card_placed)
+	newCard.doDamage.connect(_damage_enemy)
 	arrangeHand()
 	
 
@@ -41,10 +45,14 @@ func _process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):
-		drawCard(n_card)
+		drawCard(load("res://cards/heavy_shot.tres"))
 		
 
 func _on_card_card_placed(card:Node) -> void:
 	if card.position.y < 200:
-		pass
-		#card.play()
+		card.play()
+		cardsInHand.erase(card)
+
+func _damage_enemy(amount:int) -> void:
+	
+	$Enemy.take_damage(amount)
