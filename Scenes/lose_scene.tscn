@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dp4m84k4prqgm"]
+
+[ext_resource type="Script" uid="uid://dla6mn4w6471" path="res://Scripts/restart_button.gd" id="1_bjqob"]
+
+[node name="LoseScene" type="Control" unique_id=584717509]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=1379385043]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -122.0
+offset_top = 73.0
+offset_right = 123.0
+offset_bottom = 140.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+text = "YOU LOST!"
+
+[node name="RestartButton" type="Button" parent="." unique_id=1896964719]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -50.0
+offset_right = 100.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Restart"
+script = ExtResource("1_bjqob")

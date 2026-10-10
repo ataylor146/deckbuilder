@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://c13etwe3nwivd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(0.5167997, 0.30669695, 0.18393311, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5s0fj"]
+bg_color = Color(1, 0.078431375, 0.078431375, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8150989, 0.40222043, 0.77976024, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_33x8s"]
+bg_color = Color(0.61559415, 0.614242, 0.42376152, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8156863, 0.40392157, 0.78039217, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f8sg8"]
+bg_color = Color(0.66318285, 0.5673136, 0.64502513, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8156863, 0.40392157, 0.78039217, 1)
+
+[node name="RoundWinScene" type="Control" unique_id=311131055]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PickBonusPanel" type="Panel" parent="." unique_id=532640873]
+layout_mode = 0
+offset_left = 361.0
+offset_top = 42.0
+offset_right = 792.0
+offset_bottom = 148.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
+
+[node name="Label" type="Label" parent="PickBonusPanel" unique_id=181397510]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.056
+anchor_right = 0.5
+anchor_bottom = 0.056
+offset_left = -215.0
+offset_top = -5.9360003
+offset_right = 215.0
+offset_bottom = 99.064
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+text = "PICK A BONUS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Loot1" type="Button" parent="." unique_id=1882940709]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 206.0
+offset_right = 349.0
+offset_bottom = 447.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5s0fj")
+
+[node name="Label" type="Label" parent="Loot1" unique_id=187428001]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.5
+offset_top = -25.0
+offset_right = 60.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 36
+text = "+10 HP"
+horizontal_alignment = 1
+
+[node name="Loot2" type="Button" parent="." unique_id=591373841]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 206.0
+offset_right = 693.0
+offset_bottom = 447.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_33x8s")
+
+[node name="Label" type="Label" parent="Loot2" unique_id=217223672]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.5
+offset_top = -25.0
+offset_right = 60.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 36
+text = "+1 CANNON"
+horizontal_alignment = 1
+
+[node name="Loot2" type="Button" parent="Loot2" unique_id=1307380611]
+layout_mode = 0
+offset_left = 345.0
+offset_right = 581.0
+offset_bottom = 241.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_f8sg8")
+
+[node name="Label" type="Label" parent="Loot2/Loot2" unique_id=1941212443]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -171.0
+offset_top = -25.0
+offset_right = 171.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 36
+text = "+1 MANA
+ PER TURN"
+horizontal_alignment = 1
