@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bcourr8d2yg0u"]
+
+[ext_resource type="Script" uid="uid://dmyrmifbe5jk0" path="res://Scripts/cannon.gd" id="1_qlvt6"]
+[ext_resource type="Texture2D" uid="uid://b3gvawrkr72o7" path="res://Sprites/cannon.png" id="2_3uv2y"]
+[ext_resource type="Texture2D" uid="uid://dfew5ncaco0yi" path="res://Sprites/cannonball.png" id="3_3uv2y"]
+
+[node name="Cannon" type="Node2D" unique_id=1691383367]
+script = ExtResource("1_qlvt6")
+loadedMunition = 1
+
+[node name="CannonSprite" type="Sprite2D" parent="." unique_id=719605613]
+scale = Vector2(0.47750002, 0.47750002)
+texture = ExtResource("2_3uv2y")
+
+[node name="MunitionSprite" type="Sprite2D" parent="." unique_id=925152885]
+position = Vector2(-71, -70)
+scale = Vector2(0.5874998, 0.58749974)
+texture = ExtResource("3_3uv2y")

@@ -7,9 +7,9 @@ var data: EnemyData
 var MAX_HP = 5
 var hp = MAX_HP
 var damage = 1
-@onready var progress_bar: ProgressBar = $VBoxContainer/HP
-@onready var hp_text: Label = $VBoxContainer/HP/Label
-@onready var nametag: Label = $VBoxContainer/Name
+@onready var progress_bar: ProgressBar = $HP
+@onready var hp_text: Label = $HP/Label
+@onready var nametag: Label = $Name
 
 func _ready():
 	progress_bar.max_value = MAX_HP
