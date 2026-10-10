@@ -48,15 +48,7 @@ func play_card(card: CardData) -> void:
 		CardData.CardType.DEFENSE:
 			player.block += card.amount
 		CardData.CardType.EFFECT:
-			match card.effect:
-				CardData.EffectType.HEAL:
-					player.heal(card.amount)
-				CardData.EffectType.DRAW:
-					draw(card.amount)
-				CardData.EffectType.GAIN_MANA:
-					mana += card.amount
-				CardData.EffectType.REPAIR_CANNON:
-					player.repair_cannons(card.amount)
+			pass
 	update_ui()
 
 func end_turn() -> void:

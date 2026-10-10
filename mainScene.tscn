@@ -4,10 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://bt8mo5dbelmf7" path="res://enemy.tscn" id="1_g4qto"]
 [ext_resource type="Texture2D" uid="uid://ds76jbuigsfso" path="res://icon.svg" id="2_61od6"]
 [ext_resource type="PackedScene" uid="uid://badu7qssc7g76" path="res://player.tscn" id="2_hr5et"]
+[ext_resource type="Script" uid="uid://d35b34pvlmmfk" path="res://card_data.gd" id="2_vuu3o"]
+[ext_resource type="Resource" path="res://cards/brace.tres" id="3_0pyiw"]
+[ext_resource type="Resource" path="res://cards/heavy_shot.tres" id="4_14l1l"]
+[ext_resource type="Resource" path="res://cards/patch_up.tres" id="5_u7har"]
+[ext_resource type="Resource" path="res://cards/scavenge.tres" id="6_uqts1"]
+[ext_resource type="Resource" path="res://cards/strike.tres" id="7_0pyiw"]
 
 [node name="MainScene" type="Node2D" unique_id=1291007654]
 position = Vector2(575, 277)
 script = ExtResource("1_61od6")
+starting_deck = Array[ExtResource("2_vuu3o")]([ExtResource("3_0pyiw"), ExtResource("4_14l1l"), ExtResource("5_u7har"), ExtResource("6_uqts1"), ExtResource("7_0pyiw")])
 
 [node name="Enemy" parent="." unique_id=282441340 instance=ExtResource("1_g4qto")]
 
@@ -61,3 +68,23 @@ offset_top = 153.0
 offset_right = 59.0
 offset_bottom = 184.0
 text = "DAMAGE ENEMY"
+
+[node name="ManaLabel" type="Label" parent="." unique_id=1493196201]
+offset_left = 416.0
+offset_top = 165.0
+offset_right = 456.0
+offset_bottom = 188.0
+text = "5/5"
+
+[node name="EndTurnButton" type="Button" parent="." unique_id=1577266329]
+offset_left = 416.0
+offset_top = 165.0
+offset_right = 424.0
+offset_bottom = 173.0
+text = "End Turn"
+
+[node name="Hand" type="HBoxContainer" parent="." unique_id=96641634]
+offset_left = -317.0
+offset_top = 188.0
+offset_right = 310.0
+offset_bottom = 340.0
