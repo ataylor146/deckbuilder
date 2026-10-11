@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://csgdh8rcqpx6c"]
+
+[node name="Cross" type="Node2D" unique_id=1818367852]
+rotation = 0.7853982
+scale = Vector2(0.5, 0.5)
+
+[node name="Line2D" type="Line2D" parent="." unique_id=143366443]
+position = Vector2(-354.49307, -80.73952)
+points = PackedVector2Array(172, 81, 536, 81)
+width = 15.0
+default_color = Color(1, 0, 0, 1)
+
+[node name="Line2D2" type="Line2D" parent="." unique_id=583815252]
+position = Vector2(81.08473, -348.02588)
+rotation = 1.5707964
+points = PackedVector2Array(172, 81, 286.10004, 81, 326.8, 80.999985, 374.09998, 80.99999, 536, 81)
+width = 15.0
+default_color = Color(1, 0, 0, 1)

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bt8mo5dbelmf7" path="res://Scenes/enemy.tscn" id="3_8l818"]
 [ext_resource type="PackedScene" uid="uid://bcourr8d2yg0u" path="res://Scenes/cannon.tscn" id="4_shhme"]
 [ext_resource type="PackedScene" uid="uid://c13etwe3nwivd" path="res://Scenes/WinScreen.tscn" id="5_s4i1f"]
+[ext_resource type="PackedScene" uid="uid://biintfx5r5wqg" path="res://Scenes/map.tscn" id="7_twe5h"]
 
 [node name="Board" type="Node2D" unique_id=687119862]
 script = ExtResource("1_8l818")
@@ -31,7 +32,6 @@ loadedMunition = 2
 
 [node name="Cannon3" parent="." unique_id=575758701 instance=ExtResource("4_shhme")]
 position = Vector2(994, 436)
-loadedMunition = 0
 
 [node name="Cannon4" parent="." unique_id=1549919177 instance=ExtResource("4_shhme")]
 position = Vector2(700, 86)
@@ -48,5 +48,9 @@ opposing = true
 [node name="RoundWinScene" parent="." unique_id=311131055 instance=ExtResource("5_s4i1f")]
 visible = false
 z_index = 1000
+
+[node name="Map" parent="." unique_id=1256346984 instance=ExtResource("7_twe5h")]
+visible = false
+z_index = 1001
 
 [connection signal="defeated" from="Enemy" to="." method="_on_enemy_defeated"]

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dmt5pa1v60juj"]
+
+[ext_resource type="Texture2D" uid="uid://tcx8tv3f6nnb" path="res://Sprites/[CITYPNG.COM]Circle Red Transparent Background - 2000x2000.png" id="1_2fohy"]
+
+[node name="Pin" type="Node2D" unique_id=1769018671]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1828162711]
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("1_2fohy")

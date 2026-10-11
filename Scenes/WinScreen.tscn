@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c13etwe3nwivd"]
 
-[ext_resource type="Script" uid="uid://b0wmrtv7su13g" path="res://Scenes/loot_1.gd" id="1_68w7f"]
-[ext_resource type="Script" uid="uid://c6tk4l46u42yo" path="res://Scenes/loot_2.gd" id="2_d8xbi"]
-[ext_resource type="Script" uid="uid://d1jp514rcdaic" path="res://Scenes/loot_3.gd" id="3_82r0j"]
+[ext_resource type="Script" uid="uid://b0wmrtv7su13g" path="res://Scripts/loot_1.gd" id="1_68w7f"]
+[ext_resource type="Script" uid="uid://c6tk4l46u42yo" path="res://Scripts/loot_2.gd" id="2_d8xbi"]
+[ext_resource type="Script" uid="uid://d1jp514rcdaic" path="res://Scripts/loot_3.gd" id="3_82r0j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yf5fn"]
 bg_color = Color(0.49173367, 0.63659364, 0.5973249, 1)

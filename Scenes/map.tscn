@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://biintfx5r5wqg"]
+
+[ext_resource type="Texture2D" uid="uid://c57een3r6rq5r" path="res://Sprites/IMG_0230.PNG" id="1_c7s6e"]
+[ext_resource type="Script" uid="uid://cl5mefrqg6fn4" path="res://Scripts/map.gd" id="1_p3ir5"]
+[ext_resource type="Texture2D" uid="uid://br12ykw24e6ql" path="res://Sprites/pirate-ship-clip-art-1-2726867826.png" id="2_26yhd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0mm3"]
+bg_color = Color(0, 0.667977, 0.8026021, 1)
+
+[node name="Map" type="Control" unique_id=1256346984]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p3ir5")
+
+[node name="Panel" type="Panel" parent="." unique_id=1522036240]
+layout_mode = 0
+offset_right = 1163.0
+offset_bottom = 652.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q0mm3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=729404080]
+texture_filter = 1
+position = Vector2(592, 327)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_c7s6e")
+
+[node name="Enemy1" type="TextureButton" parent="." unique_id=1897970298]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 101.0
+offset_right = 2377.0
+offset_bottom = 1473.0
+scale = Vector2(0.07, 0.07)
+disabled = true
+texture_normal = ExtResource("2_26yhd")
+
+[node name="Enemy2" type="TextureButton" parent="." unique_id=1033316653]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 80.0
+offset_right = 2560.0
+offset_bottom = 1452.0
+scale = Vector2(0.07, 0.07)
+disabled = true
+texture_normal = ExtResource("2_26yhd")
+
+[node name="Enemy3" type="TextureButton" parent="." unique_id=1808087474]
+layout_mode = 0
+offset_left = 624.0
+offset_top = 208.0
+offset_right = 2544.0
+offset_bottom = 1580.0
+scale = Vector2(0.07, 0.07)
+disabled = true
+texture_normal = ExtResource("2_26yhd")
+flip_h = true
+
+[node name="Enemy4" type="TextureButton" parent="." unique_id=440145590]
+layout_mode = 0
+offset_left = 447.0
+offset_top = 281.0
+offset_right = 2367.0
+offset_bottom = 1653.0
+scale = Vector2(0.07, 0.07)
+disabled = true
+texture_normal = ExtResource("2_26yhd")
+flip_h = true
+
+[node name="Enemy5" type="TextureButton" parent="." unique_id=235517439]
+layout_mode = 0
+offset_left = 622.0
+offset_top = 404.0
+offset_right = 2542.0
+offset_bottom = 1776.0
+scale = Vector2(0.07, 0.07)
+disabled = true
+texture_normal = ExtResource("2_26yhd")

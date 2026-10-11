@@ -10,4 +10,6 @@ func _on_pressed() -> void:
 	print("YOU GOT +10 HP")
 	player.heal(10);
 	$"../../Enemy".setup(load("res://enemies/skipper.tres"))
+	$"../../Map".visible = true
+	$"../../Map".next_cycle()
 	$"../../RoundWinScene".visible = false
