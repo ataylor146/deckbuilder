@@ -130,8 +130,6 @@ func _apply_effect(data: CardData) -> void:
 				drawFromPile()
 		CardData.EffectType.GAIN_MANA:
 			$Player.setManpower($Player.manpower + data.amount)
-		CardData.EffectType.REPAIR_CANNON:
-			$Player.repair_cannons(data.amount)
 		CardData.EffectType.NONE:
 			pass
 func _damage_enemy(amount:int) -> void:

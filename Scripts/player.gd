@@ -3,9 +3,7 @@ extends Node2D
 var MAX_HP = 100
 var manpowerPerRound = 3
 var manpower = 3
-var CANNONS = 3
-var MAX_CANNONS = 10
-var lastThreshold = 3
+var CANNONS := 4
 var hp = MAX_HP
 var block = 0
 
@@ -24,8 +22,7 @@ func _ready() -> void:
 	setManpower(manpowerPerRound)
 	progress_bar.max_value = MAX_HP
 	update_ui()
-	lastThreshold = check_cannons()
-
+	
 func take_damage(dmg: int) -> void:
 	var absorbed = min(block, dmg)
 	block -= absorbed
@@ -36,12 +33,6 @@ func take_damage(dmg: int) -> void:
 	if hp <= 0:
 		get_tree().change_scene_to_file("res://Scenes/lose_scene.tscn")
 		return
-
-	var threshold := check_cannons()
-	if threshold < lastThreshold:
-		CANNONS = max(CANNONS - (lastThreshold - threshold), 0)
-		print("CANNON DESTROYED! NOW YOU HAVE ", CANNONS)
-	lastThreshold = threshold
 
 func heal(value: int) -> void:
 	hp = min(hp + value, MAX_HP)
@@ -60,12 +51,6 @@ func update_block_ui():
 		defence.visible = true
 	defence_text.text = str(block)
 
-func repair_cannons(value: int) -> void:
-	CANNONS = min(CANNONS + value, MAX_CANNONS)
-	update_ui()
-
-func check_cannons() -> int:
-	return ceili(float(hp) / MAX_HP * MAX_CANNONS)
 	
 func update_ui() -> void:
 	hp_text.text = str(hp)
