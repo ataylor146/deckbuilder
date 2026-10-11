@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c13etwe3nwivd"]
 
 [ext_resource type="Script" uid="uid://b0wmrtv7su13g" path="res://Scenes/loot_1.gd" id="1_68w7f"]
+[ext_resource type="Script" uid="uid://c6tk4l46u42yo" path="res://Scenes/loot_2.gd" id="2_d8xbi"]
+[ext_resource type="Script" uid="uid://d1jp514rcdaic" path="res://Scenes/loot_3.gd" id="3_82r0j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yf5fn"]
 bg_color = Color(0.49173367, 0.63659364, 0.5973249, 1)
@@ -106,6 +108,7 @@ offset_top = 206.0
 offset_right = 693.0
 offset_bottom = 447.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_33x8s")
+script = ExtResource("2_d8xbi")
 
 [node name="Label" type="Label" parent="Loot2" unique_id=217223672]
 layout_mode = 1
@@ -124,14 +127,16 @@ theme_override_font_sizes/font_size = 36
 text = "+1 CANNON"
 horizontal_alignment = 1
 
-[node name="Loot2" type="Button" parent="Loot2" unique_id=1307380611]
+[node name="Loot3" type="Button" parent="." unique_id=1307380611]
 layout_mode = 0
-offset_left = 345.0
-offset_right = 581.0
-offset_bottom = 241.0
+offset_left = 802.0
+offset_top = 206.0
+offset_right = 1038.0
+offset_bottom = 447.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_f8sg8")
+script = ExtResource("3_82r0j")
 
-[node name="Label" type="Label" parent="Loot2/Loot2" unique_id=1941212443]
+[node name="Label" type="Label" parent="Loot3" unique_id=1941212443]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

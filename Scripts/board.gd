@@ -77,5 +77,5 @@ func _damage_enemy(amount:int) -> void:
 
 func _on_enemy_defeated() -> void:
 	print("enemy down!")
-	get_tree().change_scene_to_file("res://Scenes/round_win_panel.tscn")
+	$RoundWinScene.visible = true
 	

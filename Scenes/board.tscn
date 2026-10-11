@@ -46,5 +46,7 @@ position = Vector2(322, 88)
 opposing = true
 
 [node name="RoundWinScene" parent="." unique_id=311131055 instance=ExtResource("5_s4i1f")]
+visible = false
+z_index = 1000
 
 [connection signal="defeated" from="Enemy" to="." method="_on_enemy_defeated"]
