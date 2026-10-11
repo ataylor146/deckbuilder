@@ -24,6 +24,9 @@ func _ready() -> void:
 	_apply_data()
 	pivot_offset = size / 2.0
 
+func refreshDescription(cannons: int) -> void:
+	$VBoxContainer/Description.text = data.getDescription(cannons)
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if button_pressed:

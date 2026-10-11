@@ -84,6 +84,7 @@ func arrangeHand() -> void:
 		card.homeRotation = deg_to_rad(t * cardTilt)
 		card.z_index = i
 		card.disabled = card.cost > $Player.manpower
+		card.refreshDescription($Player.CANNONS)
 
 func drawCard(data:CardData):
 	var newCard:Card = n_card.instantiate()
@@ -107,7 +108,7 @@ func _on_card_card_placed(card: Card) -> void:
 
 	match card.cardType:
 		CardData.CardType.ATTACK:
-			_damage_enemy(card.data.amount)
+			_damage_enemy(card.data.amount * $Player.CANNONS)
 		CardData.CardType.DEFENSE:
 			$Player.add_block(card.data.amount)
 		CardData.CardType.EFFECT:

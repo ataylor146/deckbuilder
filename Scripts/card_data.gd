@@ -26,15 +26,20 @@ enum EffectType {
 @export var art: Texture2D
 @export var sound: AudioStream
 
-func getDescription() -> String:
+func getDescription(cannons := 1) -> String:
 	if description.is_empty():
-		return getDefaultDescription()
-	return description.format({"amount": amount, "name": cardName})
+		return getDefaultDescription(cannons)
+	return description.format({
+		"amount": amount,
+		"name": cardName,
+		"cannons": cannons,
+		"total": amount * cannons,
+	})
 
-func getDefaultDescription() -> String:
+func getDefaultDescription(cannons := 1) -> String:
 	match cardType:
 		CardType.ATTACK:
-			return "Deal %d damage." % amount
+			return "Deal %d × %d" % [amount, cannons]
 		CardType.DEFENSE:
 			return "Gain %d block." % amount
 		CardType.EFFECT:
