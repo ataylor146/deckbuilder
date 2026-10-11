@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://y4o1sp03uy3u" path="res://Sprites/impact 1.png" id="3_afpow"]
 [ext_resource type="Texture2D" uid="uid://c2rshsf6madey" path="res://Sprites/impact 3.png" id="4_ghaa6"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x3wgy"]
+bg_color = Color(1, 0.15686275, 0.18431373, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_cvnsp"]
 font_size = 30
 
@@ -32,6 +35,7 @@ offset_top = 628.0
 offset_right = 1126.0
 offset_bottom = 711.0
 size_flags_vertical = 8
+theme_override_styles/background = SubResource("StyleBoxFlat_x3wgy")
 show_percentage = false
 
 [node name="Label" type="Label" parent="HP" unique_id=70410804]

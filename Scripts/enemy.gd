@@ -60,6 +60,7 @@ func take_damage(dmg: int) -> void:
 		emit_signal("defeated")
 		
 func play_impact() -> void:
+	await get_tree().create_timer(0.3).timeout
 	sprite.visible = true
 	for tex in impacts:
 		sprite.texture = tex

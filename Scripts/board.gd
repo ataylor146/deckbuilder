@@ -17,6 +17,8 @@ var discard: Array[CardData] = []
 
 const HAND_SIZE := 5
 
+@export var cannonballs_positions: Array[Marker2D] = []
+
 enum States{
 	PLAYER_TURN,
 	OPPONENT_TURN,
@@ -125,6 +127,11 @@ func _on_card_card_placed(card: Card) -> void:
 	match card.cardType:
 		CardData.CardType.ATTACK:
 			_damage_enemy(card.data.amount * $Player.CANNONS)
+			$Cannonball.visible = true
+			for i in range(cannonballs_positions.size()):
+				$Cannonball.position = cannonballs_positions[i].position
+				await get_tree().create_timer(0.1).timeout
+			$Cannonball.visible = false	
 		CardData.CardType.DEFENSE:
 			$Player.add_block(card.data.amount)
 		CardData.CardType.EFFECT:

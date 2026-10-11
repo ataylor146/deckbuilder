@@ -12,6 +12,9 @@ font_size = 30
 shadow_size = 20
 shadow_color = Color(0, 0, 0, 0.5254902)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x3wgy"]
+bg_color = Color(0.5910629, 0.5843071, 0.7166493, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_fkybt"]
 font_size = 30
 
@@ -42,6 +45,7 @@ offset_top = 472.0
 offset_right = 816.0
 offset_bottom = 555.0
 size_flags_vertical = 8
+theme_override_styles/background = SubResource("StyleBoxFlat_x3wgy")
 show_percentage = false
 
 [node name="Label" type="Label" parent="HP" unique_id=733353890]
