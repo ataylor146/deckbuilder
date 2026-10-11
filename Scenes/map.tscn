@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://biintfx5r5wqg"]
 
-[ext_resource type="Texture2D" uid="uid://c57een3r6rq5r" path="res://Sprites/IMG_0230.PNG" id="1_c7s6e"]
 [ext_resource type="Script" uid="uid://cl5mefrqg6fn4" path="res://Scripts/map.gd" id="1_p3ir5"]
-[ext_resource type="Texture2D" uid="uid://dlnrlxwggl642" path="res://Sprites/ship.png" id="3_p3ir5"]
+[ext_resource type="Texture2D" uid="uid://b08wp8e4dk71h" path="res://Sprites/card bg NO COST.png" id="2_p3ir5"]
+[ext_resource type="Texture2D" uid="uid://c84tijv7wwqhv" path="res://Sprites/ship.png" id="3_p3ir5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0mm3"]
 bg_color = Color(0, 0.667977, 0.8026021, 1)
@@ -26,14 +26,14 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_q0mm3")
 texture_filter = 1
 position = Vector2(592, 327)
 scale = Vector2(0.65, 0.65)
-texture = ExtResource("1_c7s6e")
+texture = ExtResource("2_p3ir5")
 
 [node name="Enemy1" type="TextureButton" parent="." unique_id=1897970298]
 layout_mode = 0
-offset_left = 452.0
-offset_top = 96.0
-offset_right = 2285.333
-offset_bottom = 2112.6665
+offset_left = 496.0
+offset_top = 46.00001
+offset_right = 2329.333
+offset_bottom = 2062.6665
 scale = Vector2(0.06, 0.06)
 disabled = true
 texture_normal = ExtResource("3_p3ir5")
@@ -41,46 +41,24 @@ stretch_mode = 4
 
 [node name="Enemy2" type="TextureButton" parent="." unique_id=1033316653]
 layout_mode = 0
-offset_left = 640.0
-offset_top = 80.0
-offset_right = 2223.334
-offset_bottom = 1880.0
+offset_left = 709.0
+offset_top = 201.0
+offset_right = 2292.334
+offset_bottom = 2001.0
 scale = Vector2(0.06, 0.06)
 disabled = true
 texture_normal = ExtResource("3_p3ir5")
 stretch_mode = 4
+flip_h = true
 
 [node name="Enemy3" type="TextureButton" parent="." unique_id=1808087474]
 layout_mode = 0
-offset_left = 609.0
-offset_top = 229.0
-offset_right = 2358.999
-offset_bottom = 2145.6665
+offset_left = 535.00006
+offset_top = 367.0
+offset_right = 2284.999
+offset_bottom = 2283.6665
 scale = Vector2(0.06, 0.06)
 disabled = true
 texture_normal = ExtResource("3_p3ir5")
 stretch_mode = 4
 flip_h = true
-
-[node name="Enemy4" type="TextureButton" parent="." unique_id=440145590]
-layout_mode = 0
-offset_left = 474.0
-offset_top = 323.0
-offset_right = 2024.0005
-offset_bottom = 2123.0
-scale = Vector2(0.06, 0.06)
-disabled = true
-texture_normal = ExtResource("3_p3ir5")
-stretch_mode = 4
-flip_h = true
-
-[node name="Enemy5" type="TextureButton" parent="." unique_id=235517439]
-layout_mode = 0
-offset_left = 645.00006
-offset_top = 416.0
-offset_right = 1945.0
-offset_bottom = 1849.3335
-scale = Vector2(0.06, 0.06)
-disabled = true
-texture_normal = ExtResource("3_p3ir5")
-stretch_mode = 4

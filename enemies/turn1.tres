@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_cv38x")
 actionName = "Volley"
-damage = 6
+damage = 15
 block = 3

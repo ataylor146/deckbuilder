@@ -1,7 +1,7 @@
 extends Control
 
 var index := 0
-@onready var Enemies: Array[TextureButton] = [$Enemy1, $Enemy2, $Enemy3, $Enemy4, $Enemy5]
+@onready var Enemies: Array[TextureButton] = [$Enemy1, $Enemy2, $Enemy3]
 var cross_scene = preload("res://Scenes/cross.tscn")
 var pin_scene = preload("res://Scenes/pin.tscn")
 signal battle_selected(index: int)
@@ -13,11 +13,11 @@ func _ready() -> void:
 		Enemies[i].pressed.connect(_on_enemy_pressed.bind(i))
 
 func next_cycle() -> void:
-	if index < 3:
+	if index < 2:
 		create_cross()
 		index += 1
 	else:
-		get_tree().change_scene_to_file("res://Scenes/board.tscn")
+		get_tree().change_scene_to_file("res://Scenes/victory_screen.tscn")
 
 func create_cross():
 	var cross = cross_scene.instantiate()
