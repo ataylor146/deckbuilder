@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dgqif6xctajgt" path="res://Scripts/board.gd" id="1_8l818"]
 [ext_resource type="Texture2D" uid="uid://dn14lajsy6sgk" path="res://Sprites/ocean.jpg" id="2_shhme"]
 [ext_resource type="PackedScene" uid="uid://bt8mo5dbelmf7" path="res://Scenes/enemy.tscn" id="3_8l818"]
-[ext_resource type="PackedScene" uid="uid://bcourr8d2yg0u" path="res://Scenes/cannon.tscn" id="4_shhme"]
+[ext_resource type="PackedScene" uid="uid://badu7qssc7g76" path="res://Scenes/player.tscn" id="5_s4i1f"]
 
 [node name="Board" type="Node2D" unique_id=687119862]
 script = ExtResource("1_8l818")
@@ -18,27 +18,14 @@ texture = ExtResource("2_shhme")
 
 [node name="Enemy" parent="." unique_id=282441340 instance=ExtResource("3_8l818")]
 
-[node name="Cannon" parent="." unique_id=1691383367 instance=ExtResource("4_shhme")]
-position = Vector2(170, 489)
+[node name="Player" parent="." unique_id=499854778 instance=ExtResource("5_s4i1f")]
 
-[node name="Cannon2" parent="." unique_id=887126168 instance=ExtResource("4_shhme")]
-position = Vector2(627, 442)
-loadedMunition = 2
-
-[node name="Cannon3" parent="." unique_id=575758701 instance=ExtResource("4_shhme")]
-position = Vector2(994, 436)
-loadedMunition = 0
-
-[node name="Cannon4" parent="." unique_id=1549919177 instance=ExtResource("4_shhme")]
-position = Vector2(700, 86)
-opposing = true
-
-[node name="Cannon5" parent="." unique_id=997904421 instance=ExtResource("4_shhme")]
-position = Vector2(1079, 106)
-opposing = true
-
-[node name="Cannon6" parent="." unique_id=1239653606 instance=ExtResource("4_shhme")]
-position = Vector2(322, 88)
-opposing = true
+[node name="Button" type="Button" parent="." unique_id=1048036788]
+offset_left = 993.0
+offset_top = 470.0
+offset_right = 1148.0
+offset_bottom = 533.0
+toggle_mode = true
+text = "End Turn >>"
 
 [connection signal="defeated" from="Enemy" to="." method="_on_enemy_defeated"]

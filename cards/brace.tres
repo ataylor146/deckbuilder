@@ -6,6 +6,8 @@
 [resource]
 script = ExtResource("1_cd")
 cardName = "Brace"
+description = null
 cardType = 1
+manaCost = null
 amount = 5
 art = ExtResource("1_4op2w")

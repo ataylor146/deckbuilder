@@ -2,12 +2,14 @@ class_name Card
 extends Button
 
 signal cardPlaced(Card)
-signal doDamage(amount:int)
 
 var grabPos : Vector2
 var formerPos : Vector2
 var formerZ: int
 var data : CardData
+var munition: Cannon.Munition
+var cardType: CardData.CardType
+
 @export var homePosition : Vector2
 
 
@@ -40,16 +42,16 @@ func _on_button_up():
 func _apply_data() -> void:
 	$VBoxContainer/HBoxContainer/Title.text = data.cardName
 	$VBoxContainer/Art.texture = data.art
+	
 	if not data.description.is_empty():
 		$VBoxContainer/Description.text = data.description 
 	else:
 		$VBoxContainer/Description.text = data.getDefaultDescription()
+	cardType = data.cardType
+	munition = data.munition
 
 func play():
-	if data.cardType == CardData.CardType.DAMAGE:
-		emit_signal("doDamage", data.amount)
-	else:
-		print("unimplemented effect")
+	print("unimplemented effect")
 	queue_free()
 	
 func setHomePos(p: Vector2):

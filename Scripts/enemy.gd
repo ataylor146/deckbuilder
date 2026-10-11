@@ -11,11 +11,12 @@ var damage = 1
 @onready var hp_text: Label = $HP/Label
 @onready var nametag: Label = $Name
 
+var cannons: Array[Cannon]
+
 func _ready():
+	cannons.append_array([$Cannon, $Cannon2, $Cannon3])
 	progress_bar.max_value = MAX_HP
 	update_ui()
-	print(progress_bar.value)
-	print(progress_bar.max_value)
 
 func setup(enemy_data:EnemyData) -> void:
 	data = enemy_data

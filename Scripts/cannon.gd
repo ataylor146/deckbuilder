@@ -17,6 +17,8 @@ enum Munition{
 }
 
 func updateMunition():
+	print(loadedMunition)
+	munitionSprite.visible = true
 	match loadedMunition:
 		Munition.CANNONBALL:
 			munitionSprite.texture = load("res://Sprites/cannonball.png")

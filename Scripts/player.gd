@@ -1,24 +1,27 @@
 extends Node2D
 
 var MAX_HP = 100
-var MANA_PER_ROUND = 3
+var manpowerPerRound = 3
+var manpower = 3
 var CANNONS = 3
 var hp = MAX_HP
 var block = 0
 
+var cannons: Array[Cannon]
+
+func setManpower(n: int):
+	manpower = n
+	$Manpower.text = "Manpower: " + str(n)
+
 func _ready() -> void:
-	pass
+	cannons.append_array([$Cannon, $Cannon2, $Cannon3])
 	
-func test_damage():
-	while hp > 0:
-		await get_tree().create_timer(0.1).timeout
-		take_damage(1)
 
 func take_damage(dmg: int) -> void:
 	var absorbed = min(block, dmg)
 	block -= absorbed
 	dmg -= absorbed
-
+	
 	hp -= dmg
 	if (hp <= 0):
 		print("LOSE")
