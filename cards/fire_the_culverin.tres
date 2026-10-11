@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("2_73wo6")
-cardName = "Fire the sakers"
+cardName = "Fire the culverin"
 manaCost = 4
 amount = 5
 art = ExtResource("1_a1iqa")

@@ -1,25 +1,31 @@
 [gd_scene format=3 uid="uid://dxwoxvy4rqf1l"]
 
 [ext_resource type="Script" uid="uid://dgqif6xctajgt" path="res://Scripts/board.gd" id="1_8l818"]
+[ext_resource type="Script" uid="uid://bqfmiitgp161m" path="res://Scripts/enemy_data.gd" id="2_2cdyc"]
 [ext_resource type="PackedScene" uid="uid://badu7qssc7g76" path="res://Scenes/player.tscn" id="2_bh37u"]
 [ext_resource type="Script" uid="uid://d35b34pvlmmfk" path="res://Scripts/card_data.gd" id="2_vjyv8"]
 [ext_resource type="PackedScene" uid="uid://bt8mo5dbelmf7" path="res://Scenes/enemy.tscn" id="3_8l818"]
 [ext_resource type="Texture2D" uid="uid://b1fviuys0ldiy" path="res://Sprites/main bg.png" id="3_bh37u"]
 [ext_resource type="Resource" uid="uid://c4it71i1hiccj" path="res://cards/fireball.tres" id="3_d8vyx"]
+[ext_resource type="Resource" uid="uid://nvryu46lha51" path="res://enemies/skipper.tres" id="3_qjv7d"]
+[ext_resource type="Resource" uid="uid://cdxigijwuht15" path="res://enemies/skippe2r.tres" id="4_ardhx"]
 [ext_resource type="Resource" uid="uid://crxkeedxu2315" path="res://cards/Interceptor.tres" id="4_vw4oq"]
-[ext_resource type="Resource" uid="uid://l5hrj0oj4asg" path="res://cards/fireMinions.tres" id="5_7iy1p"]
+[ext_resource type="Resource" uid="uid://l5hrj0oj4asg" path="res://cards/fire_the_sakers.tres" id="5_7iy1p"]
+[ext_resource type="Resource" uid="uid://3v1qmee5wtbr" path="res://enemies/skippe3.tres" id="5_bb5wj"]
 [ext_resource type="PackedScene" uid="uid://c13etwe3nwivd" path="res://Scenes/WinScreen.tscn" id="5_s4i1f"]
-[ext_resource type="Resource" uid="uid://b7uaihnn8o6wd" path="res://cards/Fire_the_sakers.tres" id="6_vjyv8"]
+[ext_resource type="Resource" uid="uid://b7uaihnn8o6wd" path="res://cards/Fire_the_minions.tres" id="6_vjyv8"]
 [ext_resource type="Resource" uid="uid://cvjm0y3ug5d87" path="res://cards/fire_the_culverin.tres" id="7_hm3vq"]
 [ext_resource type="PackedScene" uid="uid://biintfx5r5wqg" path="res://Scenes/map.tscn" id="7_twe5h"]
 [ext_resource type="Resource" uid="uid://d1uq5is4lhe0v" path="res://cards/quick_fix.tres" id="8_hm3vq"]
 [ext_resource type="Texture2D" uid="uid://b3u442jdhklxt" path="res://Sprites/midair cannonball.png" id="10_vjsom"]
+[ext_resource type="AudioStream" uid="uid://bgc38030moaaa" path="res://Sounds/8bit PoTC.mp3" id="19_qjv7d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_upw65"]
 bg_color = Color(0.5230736, 0.6279288, 0.5925661, 1)
 
 [node name="Board" type="Node2D" unique_id=687119862 node_paths=PackedStringArray("cannonballs_positions")]
 script = ExtResource("1_8l818")
+enemies = Array[ExtResource("2_2cdyc")]([ExtResource("3_qjv7d"), ExtResource("4_ardhx"), ExtResource("5_bb5wj")])
 starting_deck = Array[ExtResource("2_vjyv8")]([ExtResource("3_d8vyx"), ExtResource("4_vw4oq"), ExtResource("5_7iy1p"), ExtResource("6_vjyv8"), ExtResource("7_hm3vq"), ExtResource("8_hm3vq")])
 cannonballs_positions = [NodePath("Marker2D"), NodePath("Marker2D2"), NodePath("Marker2D3")]
 
@@ -69,6 +75,10 @@ offset_bottom = 592.0
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_upw65")
 text = "End Turn"
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=98318597]
+stream = ExtResource("19_qjv7d")
+autoplay = true
 
 [connection signal="defeated" from="Enemy" to="." method="_on_enemy_defeated"]
 [connection signal="pressed" from="endTurn" to="." method="_on_end_turn_pressed"]

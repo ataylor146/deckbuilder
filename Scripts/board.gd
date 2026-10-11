@@ -10,6 +10,8 @@ var n_cannon:PackedScene = load("res://Scenes/cannon.tscn")
 
 var cardsInHand: Array[Card]
 
+@export var enemies: Array[EnemyData] = []
+
 @export var starting_deck: Array[CardData] = []
 
 var draw_pile: Array[CardData] = []
@@ -38,6 +40,7 @@ func _ready() -> void:
 	start_battle()
 
 func _on_battle_selected(index: int) -> void:
+	$Enemy.setup(enemies[enemy_index])
 	start_battle()
 
 func _on_enemy_do_damage(amount: int) -> void:
@@ -125,25 +128,31 @@ func _on_card_card_placed(card: Card) -> void:
 	if card.cost > $Player.manpower:
 		return
 
-	match card.cardType:
-		CardData.CardType.ATTACK:
-			_damage_enemy(card.data.amount * $Player.CANNONS)
-			$Cannonball.visible = true
-			for i in range(cannonballs_positions.size()):
-				$Cannonball.position = cannonballs_positions[i].position
-				await get_tree().create_timer(0.1).timeout
-			$Cannonball.visible = false	
-		CardData.CardType.DEFENSE:
-			$Player.add_block(card.data.amount)
-		CardData.CardType.EFFECT:
-			_apply_effect(card.data)
+	# data переживёт удаление карты — это отдельный ресурс, а не узел
+	var data := card.data
 
 	$Player.setManpower($Player.manpower - card.cost)
-	discard.append(card.data)
+	discard.append(data)
 	cardsInHand.erase(card)
 	card.queue_free()
 	arrangeHand()
 
+	match data.cardType:
+		CardData.CardType.ATTACK:
+			await _fly_cannonball()
+			_damage_enemy(data.amount * $Player.CANNONS)
+		CardData.CardType.DEFENSE:
+			$Player.add_block(data.amount)
+		CardData.CardType.EFFECT:
+			_apply_effect(data)
+
+
+func _fly_cannonball() -> void:
+	$Cannonball.visible = true
+	for marker in cannonballs_positions:
+		$Cannonball.position = marker.position
+		await get_tree().create_timer(0.1).timeout
+	$Cannonball.visible = false
 
 func _apply_effect(data: CardData) -> void:
 	match data.effect:

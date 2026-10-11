@@ -36,10 +36,10 @@ func _apply_data():
 	damage = data.damage
 	burn = 0
 	block = 0
+	progress_bar.max_value = MAX_HP
 	pick_action()
 	update_ui()
 
-# Случайно выбирает, что враг сделает в следующий ход, и показывает это игроку.
 func pick_action() -> void:
 	if data != null and not data.actions.is_empty():
 		nextAction = data.actions.pick_random()
@@ -81,7 +81,6 @@ func tick_burn() -> void:
 	take_damage(burn)
 
 func take_turn() -> void:
-	# Блок держится весь ход игрока и сбрасывается здесь, перед новым действием
 	block = 0
 
 	if nextAction == null:
