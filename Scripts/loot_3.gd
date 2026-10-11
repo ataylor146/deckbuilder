@@ -8,7 +8,7 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	print("YOU GOT +1 MANA PER TURN OR OTHER BONUS IDK")
-	player.heal(1000000);
+	$"../..".HAND_SIZE += 1;
 	$"../../Enemy".setup(load("res://enemies/skipper.tres"))
 	$"../../Map".visible = true
 	$"../../Map".next_cycle()

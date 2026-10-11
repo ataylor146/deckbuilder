@@ -15,7 +15,7 @@ var cardsInHand: Array[Card]
 var draw_pile: Array[CardData] = []
 var discard: Array[CardData] = []
 
-const HAND_SIZE := 5
+var HAND_SIZE := 5
 
 @export var cannonballs_positions: Array[Marker2D] = []
 
