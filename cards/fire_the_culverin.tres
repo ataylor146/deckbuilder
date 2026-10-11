@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cvjm0y3ug5d87"]
+
+[ext_resource type="Texture2D" uid="uid://d21pyusho2kvb" path="res://Sprites/IMG_0229.PNG" id="1_a1iqa"]
+[ext_resource type="Script" uid="uid://d35b34pvlmmfk" path="res://Scripts/card_data.gd" id="2_73wo6"]
+[ext_resource type="AudioStream" uid="uid://drivvwk700ry8" path="res://Sounds/gunshot2.wav" id="3_chq4n"]
+
+[resource]
+script = ExtResource("2_73wo6")
+cardName = "Fire the sakers"
+manaCost = 2
+amount = 2
+art = ExtResource("1_a1iqa")
+sound = ExtResource("3_chq4n")

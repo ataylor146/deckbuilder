@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b1fviuys0ldiy" path="res://Sprites/main bg.png" id="3_bh37u"]
 [ext_resource type="Resource" uid="uid://c4it71i1hiccj" path="res://cards/fireball.tres" id="3_d8vyx"]
 [ext_resource type="Resource" uid="uid://crxkeedxu2315" path="res://cards/Interceptor.tres" id="4_vw4oq"]
-[ext_resource type="Resource" uid="uid://l5hrj0oj4asg" path="res://cards/heavy_shot.tres" id="5_7iy1p"]
+[ext_resource type="Resource" uid="uid://l5hrj0oj4asg" path="res://cards/fireMinions.tres" id="5_7iy1p"]
 [ext_resource type="PackedScene" uid="uid://c13etwe3nwivd" path="res://Scenes/WinScreen.tscn" id="5_s4i1f"]
 [ext_resource type="PackedScene" uid="uid://biintfx5r5wqg" path="res://Scenes/map.tscn" id="7_twe5h"]
 [ext_resource type="Texture2D" uid="uid://b3u442jdhklxt" path="res://Sprites/midair cannonball.png" id="10_vjsom"]

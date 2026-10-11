@@ -1,5 +1,7 @@
 extends Node2D
 
+signal cannonsChanged
+
 var MAX_HP = 100
 var manpowerPerRound = 3
 var manpower = 3
@@ -67,6 +69,7 @@ func _cannons_from_hp() -> int:
 
 # Пересчитывает пушки от HP: сломанные зажигают анимацию, починенные гаснут.
 func update_cannons() -> void:
+	var before := CANNONS
 	CANNONS = _cannons_from_hp()
 	for i in cannons_positions.size():
 		var loss: Sprite2D = cannons_positions[i].get_node("Loss")
@@ -77,6 +80,9 @@ func update_cannons() -> void:
 				_animate_loss(loss)
 		else:
 			loss.visible = false
+
+	if CANNONS != before:
+		cannonsChanged.emit()
 
 # Крутится, пока спрайт виден. Гасим visible — цикл сам завершится.
 func _animate_loss(loss: Sprite2D) -> void:

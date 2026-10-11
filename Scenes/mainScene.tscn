@@ -6,10 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://badu7qssc7g76" path="res://Scenes/player.tscn" id="2_hr5et"]
 [ext_resource type="Script" uid="uid://d35b34pvlmmfk" path="res://Scripts/card_data.gd" id="2_vuu3o"]
 [ext_resource type="Resource" uid="uid://dqgo6p3kvk5jn" path="res://cards/brace.tres" id="3_0pyiw"]
-[ext_resource type="Resource" uid="uid://l5hrj0oj4asg" path="res://cards/heavy_shot.tres" id="4_14l1l"]
+[ext_resource type="Resource" uid="uid://l5hrj0oj4asg" path="res://cards/fireMinions.tres" id="4_14l1l"]
 [ext_resource type="Resource" path="res://cards/patch_up.tres" id="5_u7har"]
 [ext_resource type="Resource" path="res://cards/scavenge.tres" id="6_uqts1"]
-[ext_resource type="Resource" path="res://cards/strike.tres" id="7_0pyiw"]
+[ext_resource type="Resource" uid="uid://df1xxqje3dabu" path="res://cards/strike.tres" id="7_0pyiw"]
 
 [node name="MainScene" type="Node2D" unique_id=1291007654]
 position = Vector2(575, 277)

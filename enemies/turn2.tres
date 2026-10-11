@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_uu1hh")
 actionName = "Volley"
-damage = 6
+damage = 10
 heal = 5

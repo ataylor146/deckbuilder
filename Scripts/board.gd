@@ -32,6 +32,7 @@ var enemy_index = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Enemy.doDamage.connect(_on_enemy_do_damage)
+	$Player.cannonsChanged.connect(arrangeHand)
 	$Enemy.setup(load("res://enemies/skipper.tres"))
 	$Map.battle_selected.connect(_on_battle_selected)
 	start_battle()
