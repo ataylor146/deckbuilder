@@ -59,7 +59,6 @@ func _input(event: InputEvent) -> void:
 		
 
 func _on_card_card_placed(card:Card) -> void:
-	$Enemy.take_damage(30)
 	if card.cardType == CardData.CardType.MUNITION and card.munition != Cannon.Munition.NONE:
 		var closestCannon = find_nearest_cannon(card)
 		if closestCannon != null and closestCannon.loadedMunition == Cannon.Munition.NONE:
@@ -69,7 +68,7 @@ func _on_card_card_placed(card:Card) -> void:
 			card.queue_free()
 			cardsInHand.erase(card)
 			arrangeHand()
-			Audio.sfx(Audio.LOADGUN)
+			#IF WE SHOT -> Audio.sfx(Audio.LOADGUN)
 
 func find_nearest_cannon(card:Card) -> Cannon:
 	var nearest: Cannon = $Player.cannons[0]
@@ -86,7 +85,7 @@ func _damage_enemy(amount:int) -> void:
 	$Enemy.take_damage(amount)
 
 func _on_enemy_defeated() -> void:
+	#IF ENEMY INDEX == 5: Audio.sfx(Audio.CELEBRATION)
 	print("enemy down!")
-	Audio.sfx(Audio.CELEBRATION)
 	$RoundWinScene.visible = true
 	

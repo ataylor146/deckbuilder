@@ -22,11 +22,6 @@ func create_cross():
 	pin.position = Enemies[index + 1].position + Vector2(60, 60)
 	Enemies[index + 1].disabled = false
 	Enemies[index].disabled = true
-	_draw()
 	
 func _on_enemy_pressed(index: int) -> void:
 	visible = false
-	
-func _draw():
-	print("AAA")
-	draw_circle(Vector2.ZERO, 50.0, Color.RED)
