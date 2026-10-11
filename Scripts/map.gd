@@ -4,6 +4,9 @@ var index := 0
 @onready var Enemies: Array[TextureButton] = [$Enemy1, $Enemy2, $Enemy3, $Enemy4, $Enemy5]
 var cross_scene = preload("res://Scenes/cross.tscn")
 var pin_scene = preload("res://Scenes/pin.tscn")
+signal battle_selected(index: int)
+
+
 
 func _ready() -> void:
 	for i in range(Enemies.size()):
@@ -25,3 +28,4 @@ func create_cross():
 	
 func _on_enemy_pressed(index: int) -> void:
 	visible = false
+	battle_selected.emit(index)

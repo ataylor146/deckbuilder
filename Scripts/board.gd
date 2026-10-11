@@ -31,12 +31,27 @@ var enemy_index = 0
 func _ready() -> void:
 	$Enemy.doDamage.connect(_on_enemy_do_damage)
 	$Enemy.setup(load("res://enemies/skipper.tres"))
-	draw_pile = starting_deck.duplicate()
-	draw_pile.shuffle()
-	take_turn()
+	$Map.battle_selected.connect(_on_battle_selected)
+	start_battle()
+
+func _on_battle_selected(index: int) -> void:
+	start_battle()
 
 func _on_enemy_do_damage(amount: int) -> void:
 	$Player.take_damage(amount)
+
+func start_battle() -> void:
+	for card in cardsInHand:
+		card.queue_free()
+	cardsInHand.clear()
+
+	discard.clear()
+	draw_pile = starting_deck.duplicate()
+	draw_pile.shuffle()
+
+	$Player.block = 0
+	$Player.update_block_ui()
+	take_turn()
 
 func end_turn() -> void:
 	if $Enemy.hp > 0:
@@ -138,6 +153,9 @@ func _damage_enemy(amount:int) -> void:
 func _on_enemy_defeated() -> void:
 	if enemy_index == 4:
 		Audio.sfx(Audio.CELEBRATION)
+		print("WIN")
+		get_tree().change_scene_to_file("res://Scenes/lose_scene.tscn")
+		# CHANGE TO WIN SCREEN
 		# WIN GAME SCREEN
 	enemy_index += 1
 	print("enemy down!")

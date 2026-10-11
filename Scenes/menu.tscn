@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bjc4nusp2hnn" path="res://Scripts/start_button.gd" id="1_1rerr"]
 [ext_resource type="Texture2D" uid="uid://b1fviuys0ldiy" path="res://Sprites/main bg.png" id="1_cayip"]
-[ext_resource type="Texture2D" uid="uid://bp10k7e41xcfj" path="res://Sprites/card bg NO COST.png" id="2_158mb"]
+[ext_resource type="Texture2D" uid="uid://b08wp8e4dk71h" path="res://Sprites/card bg NO COST.png" id="2_158mb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_37okk"]
 font_size = 80
