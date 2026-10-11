@@ -10,6 +10,9 @@ var damage = 1
 @onready var progress_bar: ProgressBar = $HP
 @onready var hp_text: Label = $HP/Label
 
+@export var impacts: Array[Texture2D] = []
+@onready var sprite: Sprite2D = $Impact1
+
 var cannons: Array[Cannon]
 
 func _ready():
@@ -30,10 +33,18 @@ func _apply_data():
 
 func take_damage(dmg: int) -> void:
 	hp -= dmg
+	play_impact()
 	Audio.sfx(Audio.ENEMYHURT)
 	update_ui()
 	if hp <= 0:
 		emit_signal("defeated")
+		
+func play_impact() -> void:
+	sprite.visible = true
+	for tex in impacts:
+		sprite.texture = tex
+		await get_tree().create_timer(0.1).timeout
+	sprite.visible = false
 
 func take_turn() -> void:
 	fire_canon()

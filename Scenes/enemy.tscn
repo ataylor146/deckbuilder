@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://bt8mo5dbelmf7"]
 
 [ext_resource type="Script" uid="uid://phkco4yutgq5" path="res://Scripts/enemy.gd" id="1_1f0kj"]
-[ext_resource type="Texture2D" uid="uid://dlnrlxwggl642" path="res://Sprites/ship.png" id="2_1f0kj"]
+[ext_resource type="Texture2D" uid="uid://c84tijv7wwqhv" path="res://Sprites/ship.png" id="2_1f0kj"]
+[ext_resource type="Texture2D" uid="uid://ncbdxm6svcsj" path="res://Sprites/impact 2.png" id="3_0830c"]
+[ext_resource type="Texture2D" uid="uid://y4o1sp03uy3u" path="res://Sprites/impact 1.png" id="3_afpow"]
+[ext_resource type="Texture2D" uid="uid://c2rshsf6madey" path="res://Sprites/impact 3.png" id="4_ghaa6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cvnsp"]
 font_size = 30
@@ -9,6 +12,7 @@ font_size = 30
 [node name="Enemy" type="Node2D" unique_id=282441340]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_1f0kj")
+impacts = Array[Texture2D]([ExtResource("3_afpow"), ExtResource("3_0830c"), ExtResource("4_ghaa6")])
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1436865980]
 offset_left = 668.0
@@ -44,3 +48,9 @@ text = "7676 HP"
 label_settings = SubResource("LabelSettings_cvnsp")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Impact1" type="Sprite2D" parent="." unique_id=743188650]
+visible = false
+position = Vector2(650, 479.99997)
+scale = Vector2(0.31835938, 0.31835938)
+texture = ExtResource("3_afpow")
