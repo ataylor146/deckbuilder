@@ -9,6 +9,7 @@ var formerZ: int
 var data : CardData
 var munition: Cannon.Munition
 var cardType: CardData.CardType
+var cost: int
 
 @export var homePosition : Vector2
 
@@ -49,6 +50,8 @@ func _apply_data() -> void:
 		$VBoxContainer/Description.text = data.getDefaultDescription()
 	cardType = data.cardType
 	munition = data.munition
+	cost = data.manaCost
+	$VBoxContainer/HBoxContainer/Cost.text = str(cost)
 
 func play():
 	print("unimplemented effect")

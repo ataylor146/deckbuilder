@@ -20,7 +20,14 @@ layout_mode = 2
 
 [node name="Title" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1215540588]
 layout_mode = 2
+size_flags_horizontal = 2
 text = "Card Title"
+
+[node name="Cost" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=548457199]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "0"
+horizontal_alignment = 2
 
 [node name="Art" type="TextureRect" parent="VBoxContainer" unique_id=73882550]
 layout_mode = 2

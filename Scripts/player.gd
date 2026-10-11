@@ -15,7 +15,7 @@ func setManpower(n: int):
 
 func _ready() -> void:
 	cannons.append_array([$Cannon, $Cannon2, $Cannon3])
-	
+	setManpower(manpowerPerRound)
 
 func take_damage(dmg: int) -> void:
 	var absorbed = min(block, dmg)

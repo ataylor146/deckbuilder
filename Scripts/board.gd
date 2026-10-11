@@ -8,7 +8,13 @@ var n_cannon:PackedScene = load("res://Scenes/cannon.tscn")
 
 var cardsInHand: Array[Card]
 
-var step = true
+enum States{
+	PLAYER_TURN,
+	OPPONENT_TURN,
+	EXECUTION_STEP
+}
+
+var state := States.PLAYER_TURN
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -31,6 +37,7 @@ func arrangeHand() -> void:
 	var positions = handPositions(cardsInHand.size())
 	for i in range(cardsInHand.size()):
 		cardsInHand[i].homePosition = positions[i]
+		cardsInHand[i].disabled = cardsInHand[i].cost > $Player.manpower
 
 func drawCard(data:CardData):
 	var newCard:Card = n_card.instantiate()
@@ -57,6 +64,7 @@ func _on_card_card_placed(card:Card) -> void:
 		if closestCannon != null and closestCannon.loadedMunition == Cannon.Munition.NONE:
 			closestCannon.loadedMunition = card.munition
 			closestCannon.updateMunition()
+			$Player.setManpower($Player.manpower - card.cost)
 			card.queue_free()
 			cardsInHand.erase(card)
 			arrangeHand()
