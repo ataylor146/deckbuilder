@@ -25,6 +25,7 @@ enum EffectType {
 @export var effect := EffectType.NONE
 @export var munition := Cannon.Munition.NONE
 @export var art: Texture2D
+@export var sound: AudioStream
 
 func getDescription() -> String:
 	if description.is_empty():

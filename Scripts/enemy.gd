@@ -33,6 +33,7 @@ func _apply_data():
 
 func take_damage(dmg: int) -> void:
 	hp -= dmg
+	Audio.sfx(Audio.ENEMYHURT)
 	update_ui()
 	if hp <= 0:
 		emit_signal("defeated")
