@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cas8720vgd30m"]
+
+[ext_resource type="Texture2D" uid="uid://b1fviuys0ldiy" path="res://Sprites/main bg.png" id="1_oq8vb"]
+[ext_resource type="Script" uid="uid://capwa4lbkqgyv" path="res://Scripts/gpu_particles_2d.gd" id="2_mubwb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mubwb"]
+font_size = 80
+font_color = Color(1, 0.6509804, 0, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_vrh3u"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_oq8vb"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+
+[node name="Victory Screen" type="Node2D" unique_id=1935795441]
+
+[node name="MainBg" type="Sprite2D" parent="." unique_id=587285697]
+position = Vector2(594, 306)
+scale = Vector2(1.4802392, 1.4802392)
+texture = ExtResource("1_oq8vb")
+
+[node name="Label" type="Label" parent="." unique_id=1836896469]
+offset_left = 432.0
+offset_top = 165.0
+offset_right = 766.0
+offset_bottom = 275.0
+text = "You win!"
+label_settings = SubResource("LabelSettings_mubwb")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1376888102]
+position = Vector2(583.00006, -78)
+scale = Vector2(6.603996, 0.65475756)
+amount = 200
+texture = SubResource("CanvasTexture_vrh3u")
+process_material = SubResource("ParticleProcessMaterial_oq8vb")
+script = ExtResource("2_mubwb")
