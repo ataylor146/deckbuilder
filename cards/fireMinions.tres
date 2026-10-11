@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://l5hrj0oj4asg"]
 
-[ext_resource type="Texture2D" uid="uid://d21pyusho2kvb" path="res://Sprites/IMG_0229.PNG" id="1_4168e"]
+[ext_resource type="Texture2D" uid="uid://bdqcw02aqiims" path="res://Sprites/sakers cann.png" id="1_4168e"]
 [ext_resource type="Script" uid="uid://d35b34pvlmmfk" path="res://Scripts/card_data.gd" id="2_hcp1l"]
 [ext_resource type="AudioStream" uid="uid://drivvwk700ry8" path="res://Sounds/gunshot2.wav" id="3_mpsx2"]
 

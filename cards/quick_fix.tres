@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://d1uq5is4lhe0v"]
+
+[ext_resource type="Texture2D" uid="uid://d213iiv3jfr2u" path="res://Sprites/heal.png" id="1_68d26"]
+[ext_resource type="Script" uid="uid://d35b34pvlmmfk" path="res://Scripts/card_data.gd" id="2_h1lpu"]
+[ext_resource type="AudioStream" uid="uid://drivvwk700ry8" path="res://Sounds/gunshot2.wav" id="3_ckxat"]
+
+[resource]
+script = ExtResource("2_h1lpu")
+cardName = "Quick fix"
+cardType = 2
+manaCost = 3
+amount = 15
+effect = 1
+art = ExtResource("1_68d26")
+sound = ExtResource("3_ckxat")
