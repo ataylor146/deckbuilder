@@ -8,7 +8,7 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	print("YOU GOT +1 MANPOWER")
-		player.manpowerPerRound += 1  
+	player.manpowerPerRound += 1  
 	$"../../Enemy".setup(load("res://enemies/skipper.tres"))
 	$"../../Map".visible = true
 	$"../../Map".next_cycle()
