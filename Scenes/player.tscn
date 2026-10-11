@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://badu7qssc7g76"]
 
 [ext_resource type="Script" uid="uid://deq2gmghcnj8y" path="res://Scripts/player.gd" id="1_v0iea"]
-[ext_resource type="Texture2D" uid="uid://dlnrlxwggl642" path="res://Sprites/ship.png" id="2_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://c84tijv7wwqhv" path="res://Sprites/ship.png" id="2_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://ds76jbuigsfso" path="res://Sprites/icon.svg" id="3_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://dac5gxgqe4ufc" path="res://Sprites/cann loss 2.png" id="3_x3wgy"]
+[ext_resource type="Texture2D" uid="uid://17j287f1iw18" path="res://Sprites/cann loss 3.png" id="4_3smsa"]
+[ext_resource type="Texture2D" uid="uid://b41ufih03q7eb" path="res://Sprites/cann loss 1.png" id="4_vgqql"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vgqql"]
 font_size = 30
@@ -12,9 +15,11 @@ shadow_color = Color(0, 0, 0, 0.5254902)
 [sub_resource type="LabelSettings" id="LabelSettings_fkybt"]
 font_size = 30
 
-[node name="Player" type="Node2D" unique_id=499854778]
+[node name="Player" type="Node2D" unique_id=499854778 node_paths=PackedStringArray("cannons_positions")]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_v0iea")
+impacts = Array[Texture2D]([ExtResource("4_vgqql"), ExtResource("3_x3wgy"), ExtResource("4_3smsa")])
+cannons_positions = [NodePath("Cannon1"), NodePath("Cannon2"), NodePath("Cannon3"), NodePath("Cannon4")]
 
 [node name="Manpower" type="Label" parent="." unique_id=38064966]
 offset_left = 510.0
@@ -68,3 +73,43 @@ theme_override_font_sizes/font_size = 24
 text = "5"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Cannon1" type="Marker2D" parent="." unique_id=847924768]
+position = Vector2(488, 366)
+
+[node name="Loss" type="Sprite2D" parent="Cannon1" unique_id=1365222718]
+visible = false
+z_index = 2
+position = Vector2(-3.4570694e-06, -16)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("4_vgqql")
+
+[node name="Cannon2" type="Marker2D" parent="." unique_id=1897505786]
+position = Vector2(544, 366)
+
+[node name="Loss" type="Sprite2D" parent="Cannon2" unique_id=1466700703]
+visible = false
+z_index = 2
+position = Vector2(-3.4570694e-06, -16)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("4_vgqql")
+
+[node name="Cannon3" type="Marker2D" parent="." unique_id=847953474]
+position = Vector2(608, 366)
+
+[node name="Loss" type="Sprite2D" parent="Cannon3" unique_id=1251644308]
+visible = false
+z_index = 2
+position = Vector2(-3.4570694e-06, -16)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("4_vgqql")
+
+[node name="Cannon4" type="Marker2D" parent="." unique_id=1863799593]
+position = Vector2(662, 366)
+
+[node name="Loss" type="Sprite2D" parent="Cannon4" unique_id=540022629]
+visible = false
+z_index = 2
+position = Vector2(-3.4570694e-06, -16)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("4_vgqql")

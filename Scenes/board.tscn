@@ -12,7 +12,7 @@
 [ext_resource type="Resource" path="res://cards/patch_up.tres" id="6_o5s4g"]
 [ext_resource type="Resource" path="res://cards/scavenge.tres" id="7_2cdyc"]
 [ext_resource type="PackedScene" uid="uid://biintfx5r5wqg" path="res://Scenes/map.tscn" id="7_twe5h"]
-[ext_resource type="Resource" path="res://cards/strike.tres" id="8_qjv7d"]
+[ext_resource type="Resource" uid="uid://df1xxqje3dabu" path="res://cards/strike.tres" id="8_qjv7d"]
 
 [node name="Board" type="Node2D" unique_id=687119862]
 script = ExtResource("1_8l818")
@@ -25,7 +25,7 @@ scale = Vector2(1.4761645, 1.4761645)
 texture = ExtResource("3_bh37u")
 
 [node name="Player" parent="." unique_id=499854778 instance=ExtResource("2_bh37u")]
-position = Vector2(-38, 136)
+position = Vector2(-45, 177)
 
 [node name="Hand" type="Node2D" parent="." unique_id=1715343126]
 position = Vector2(500, 524)

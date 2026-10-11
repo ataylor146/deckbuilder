@@ -98,7 +98,6 @@ func arrangeHand() -> void:
 		card.homePosition = positions[i]
 		card.homeRotation = deg_to_rad(t * cardTilt)
 		card.z_index = i
-		card.disabled = card.cost > $Player.manpower
 		card.refreshDescription($Player.CANNONS)
 
 func drawCard(data:CardData):
