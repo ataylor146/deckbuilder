@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://phkco4yutgq5" path="res://Scripts/enemy.gd" id="1_1f0kj"]
 [ext_resource type="Texture2D" uid="uid://caekgkhp6tah7" path="res://Sprites/opposingShip.png" id="2_1f0kj"]
+[ext_resource type="PackedScene" uid="uid://bcourr8d2yg0u" path="res://Scenes/cannon.tscn" id="3_afpow"]
 
 [node name="Enemy" type="Node2D" unique_id=282441340]
 script = ExtResource("1_1f0kj")
@@ -44,3 +45,22 @@ offset_left = -5.0
 offset_right = 5.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Manpower" type="Label" parent="." unique_id=678541104]
+offset_left = 1040.0
+offset_top = 236.0
+offset_right = 1080.0
+offset_bottom = 259.0
+text = "Manpower:"
+
+[node name="Cannon" parent="." unique_id=1691383367 instance=ExtResource("3_afpow")]
+position = Vector2(319, 88)
+opposing = true
+
+[node name="Cannon2" parent="." unique_id=1210583948 instance=ExtResource("3_afpow")]
+position = Vector2(729, 83)
+opposing = true
+
+[node name="Cannon3" parent="." unique_id=737801905 instance=ExtResource("3_afpow")]
+position = Vector2(1102, 112)
+opposing = true

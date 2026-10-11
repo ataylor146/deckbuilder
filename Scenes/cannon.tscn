@@ -6,7 +6,6 @@
 
 [node name="Cannon" type="Node2D" unique_id=1691383367]
 script = ExtResource("1_qlvt6")
-loadedMunition = 1
 
 [node name="CannonSprite" type="Sprite2D" parent="." unique_id=719605613]
 scale = Vector2(0.47750002, 0.47750002)

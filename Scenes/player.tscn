@@ -1,6 +1,23 @@
 [gd_scene format=3 uid="uid://badu7qssc7g76"]
 
 [ext_resource type="Script" uid="uid://deq2gmghcnj8y" path="res://Scripts/player.gd" id="1_v0iea"]
+[ext_resource type="PackedScene" uid="uid://bcourr8d2yg0u" path="res://Scenes/cannon.tscn" id="2_cvnsp"]
 
 [node name="Player" type="Node2D" unique_id=499854778]
 script = ExtResource("1_v0iea")
+
+[node name="Cannon" parent="." unique_id=1691383367 instance=ExtResource("2_cvnsp")]
+position = Vector2(205, 457)
+
+[node name="Cannon2" parent="." unique_id=1756143577 instance=ExtResource("2_cvnsp")]
+position = Vector2(536, 419)
+
+[node name="Cannon3" parent="." unique_id=1840513679 instance=ExtResource("2_cvnsp")]
+position = Vector2(922, 470)
+
+[node name="Manpower" type="Label" parent="." unique_id=38064966]
+offset_left = 1010.0
+offset_top = 553.0
+offset_right = 1102.0
+offset_bottom = 576.0
+text = "Manpower: "

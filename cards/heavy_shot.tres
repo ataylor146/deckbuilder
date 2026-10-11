@@ -5,7 +5,8 @@
 
 [resource]
 script = ExtResource("1_cd")
-cardName = "Heavy Shot"
+cardName = "HeavyShot"
 manaCost = 2
 amount = 11
+munition = 1
 art = ExtResource("1_jirl3")
