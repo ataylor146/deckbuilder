@@ -2,7 +2,7 @@ extends Resource
 class_name CardData
 
 enum CardType {
-	MUNITION,
+	ATTACK,
 	DEFENSE,
 	EFFECT,
 }
@@ -17,13 +17,12 @@ enum EffectType {
 
 @export var cardName := "New Card"
 @export_multiline var description := ""
-@export var cardType := CardType.MUNITION
+@export var cardType := CardType.ATTACK
 @export_range(0, 10) var manaCost := 1
 
 @export_range(0, 99) var amount := 1
 
 @export var effect := EffectType.NONE
-@export var munition := Cannon.Munition.NONE
 @export var art: Texture2D
 @export var sound: AudioStream
 
@@ -34,7 +33,7 @@ func getDescription() -> String:
 
 func getDefaultDescription() -> String:
 	match cardType:
-		CardType.MUNITION:
+		CardType.ATTACK:
 			return "Deal %d damage." % amount
 		CardType.DEFENSE:
 			return "Gain %d block." % amount
@@ -54,7 +53,7 @@ func getDefaultDescription() -> String:
 
 func getTypeName() -> String:
 	match cardType:
-		CardType.MUNITION: return "Munition"
+		CardType.ATTACK: return "ATTACK"
 		CardType.DEFENSE: return "Defense"
 		CardType.EFFECT: return "Effect"
 	return "Unknown"

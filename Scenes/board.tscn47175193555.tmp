@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dxwoxvy4rqf1l"]
+
+[ext_resource type="Script" uid="uid://dgqif6xctajgt" path="res://Scripts/board.gd" id="1_8l818"]
+[ext_resource type="PackedScene" uid="uid://badu7qssc7g76" path="res://Scenes/player.tscn" id="2_bh37u"]
+[ext_resource type="PackedScene" uid="uid://bt8mo5dbelmf7" path="res://Scenes/enemy.tscn" id="3_8l818"]
+[ext_resource type="Texture2D" uid="uid://b1fviuys0ldiy" path="res://Sprites/main bg.png" id="3_bh37u"]
+[ext_resource type="PackedScene" uid="uid://c13etwe3nwivd" path="res://Scenes/WinScreen.tscn" id="5_s4i1f"]
+[ext_resource type="PackedScene" uid="uid://biintfx5r5wqg" path="res://Scenes/map.tscn" id="7_twe5h"]
+
+[node name="Board" type="Node2D" unique_id=687119862]
+script = ExtResource("1_8l818")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1389736538]
+z_index = -1
+position = Vector2(570, 322.71155)
+scale = Vector2(1.1171875, 0.6322492)
+texture = ExtResource("3_bh37u")
+
+[node name="Player" parent="." unique_id=499854778 instance=ExtResource("2_bh37u")]
+position = Vector2(-129, 158)
+
+[node name="Hand" type="Node2D" parent="." unique_id=1715343126]
+position = Vector2(564, 524)
+
+[node name="Enemy" parent="." unique_id=282441340 instance=ExtResource("3_8l818")]
+position = Vector2(416, 189)
+
+[node name="RoundWinScene" parent="." unique_id=311131055 instance=ExtResource("5_s4i1f")]
+visible = false
+z_index = 1000
+
+[node name="Map" parent="." unique_id=1256346984 instance=ExtResource("7_twe5h")]
+visible = false
+z_index = 1001
+
+[connection signal="defeated" from="Enemy" to="." method="_on_enemy_defeated"]

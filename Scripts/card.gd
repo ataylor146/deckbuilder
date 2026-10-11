@@ -49,7 +49,6 @@ func _apply_data() -> void:
 	else:
 		$VBoxContainer/Description.text = data.getDefaultDescription()
 	cardType = data.cardType
-	munition = data.munition
 	cost = data.manaCost
 	$VBoxContainer/HBoxContainer/Cost.text = str(cost)
 
