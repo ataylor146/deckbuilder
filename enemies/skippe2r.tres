@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://cdxigijwuht15"]
+
+[ext_resource type="Script" uid="uid://6n58emmj0c35" path="res://Scripts/enemy_action.gd" id="1_005d4"]
+[ext_resource type="Resource" uid="uid://ciyxr0b6a1mlf" path="res://enemies/turn1.tres" id="2_tgw3n"]
+[ext_resource type="Resource" uid="uid://dwvsxymoarluj" path="res://enemies/turn2.tres" id="3_3qdyy"]
+[ext_resource type="Resource" uid="uid://dpdjkwydp8m1q" path="res://enemies/turn3.tres" id="4_jvku6"]
+[ext_resource type="Script" uid="uid://bqfmiitgp161m" path="res://Scripts/enemy_data.gd" id="5_l1me4"]
+
+[resource]
+script = ExtResource("5_l1me4")
+name = "Skipper"
+health = 30
+actions = Array[ExtResource("1_005d4")]([ExtResource("2_tgw3n"), ExtResource("3_3qdyy"), ExtResource("4_jvku6")])
+metadata/_custom_type_script = "uid://bqfmiitgp161m"

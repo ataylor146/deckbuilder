@@ -9,7 +9,6 @@
 [resource]
 script = ExtResource("1_lw4kj")
 name = "Skipper"
-health = 20
-damage = 5
+health = 30
 actions = Array[ExtResource("1_3pop7")]([ExtResource("2_ry25k"), ExtResource("3_g5iu6"), ExtResource("4_h0pt2")])
 metadata/_custom_type_script = "uid://bqfmiitgp161m"
