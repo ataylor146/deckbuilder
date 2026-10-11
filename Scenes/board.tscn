@@ -37,4 +37,12 @@ z_index = 1000
 visible = false
 z_index = 1001
 
+[node name="EndTurn" type="Button" parent="." unique_id=96871495]
+offset_left = 37.0
+offset_top = 540.0
+offset_right = 237.0
+offset_bottom = 614.0
+text = "End Turn"
+
 [connection signal="defeated" from="Enemy" to="." method="_on_enemy_defeated"]
+[connection signal="pressed" from="EndTurn" to="." method="_on_end_turn_pressed"]
