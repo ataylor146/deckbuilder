@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EnemyAction" format=3 uid="uid://ciyxr0b6a1mlf"]
+
+[ext_resource type="Script" uid="uid://6n58emmj0c35" path="res://Scripts/enemy_action.gd" id="1_cv38x"]
+
+[resource]
+script = ExtResource("1_cv38x")
+actionName = "Volley"
+damage = 6
+block = 3

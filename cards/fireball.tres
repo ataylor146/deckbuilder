@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://c4it71i1hiccj"]
+
+[ext_resource type="Texture2D" uid="uid://b8fe1dbpvqxwo" path="res://Sprites/fireball.png" id="1_fsv31"]
+[ext_resource type="Script" uid="uid://d35b34pvlmmfk" path="res://Scripts/card_data.gd" id="2_lysqw"]
+
+[resource]
+script = ExtResource("2_lysqw")
+cardName = "Fireball"
+cardType = 2
+manaCost = 2
+amount = 5
+effect = 4
+art = ExtResource("1_fsv31")

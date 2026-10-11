@@ -12,6 +12,7 @@ enum EffectType {
 	HEAL,
 	DRAW,
 	GAIN_MANA,
+	BURN,
 }
 
 @export var cardName := "New Card"
@@ -49,6 +50,8 @@ func getDefaultDescription(cannons := 1) -> String:
 					return "Draw %d card(s)." % amount
 				EffectType.GAIN_MANA:
 					return "Gain %d mana." % amount
+				EffectType.BURN:
+					return "Set fire: %d damage each turn." % amount
 				_:
 					return ""
 	return ""

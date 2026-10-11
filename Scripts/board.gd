@@ -55,6 +55,8 @@ func start_battle() -> void:
 
 func end_turn() -> void:
 	if $Enemy.hp > 0:
+		$Enemy.tick_burn()
+	if $Enemy.hp > 0:
 		$Enemy.take_turn()
 	take_turn()
 	
@@ -144,6 +146,8 @@ func _apply_effect(data: CardData) -> void:
 				drawFromPile()
 		CardData.EffectType.GAIN_MANA:
 			$Player.setManpower($Player.manpower + data.amount)
+		CardData.EffectType.BURN:
+			$Enemy.add_burn(data.amount)
 		CardData.EffectType.NONE:
 			pass
 func _damage_enemy(amount:int) -> void:

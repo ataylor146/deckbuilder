@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://crxkeedxu2315"]
+
+[ext_resource type="Texture2D" uid="uid://bmfiongg6msv1" path="res://Sprites/interceptor .png" id="1_c2rad"]
+[ext_resource type="Script" uid="uid://d35b34pvlmmfk" path="res://Scripts/card_data.gd" id="2_hfo7x"]
+
+[resource]
+script = ExtResource("2_hfo7x")
+cardName = "Block"
+cardType = 1
+manaCost = 2
+amount = 5
+art = ExtResource("1_c2rad")

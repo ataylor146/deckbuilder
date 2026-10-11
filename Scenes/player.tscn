@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://deq2gmghcnj8y" path="res://Scripts/player.gd" id="1_v0iea"]
 [ext_resource type="Texture2D" uid="uid://c84tijv7wwqhv" path="res://Sprites/ship.png" id="2_6t5aa"]
-[ext_resource type="Texture2D" uid="uid://ds76jbuigsfso" path="res://Sprites/icon.svg" id="3_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://dac5gxgqe4ufc" path="res://Sprites/cann loss 2.png" id="3_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://17j287f1iw18" path="res://Sprites/cann loss 3.png" id="4_3smsa"]
 [ext_resource type="Texture2D" uid="uid://b41ufih03q7eb" path="res://Sprites/cann loss 1.png" id="4_vgqql"]
+[ext_resource type="Texture2D" uid="uid://8ysh5puwyqgx" path="res://Sprites/shield.png" id="6_x3wgy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vgqql"]
 font_size = 30
@@ -62,7 +62,8 @@ vertical_alignment = 1
 [node name="Defence" type="Sprite2D" parent="." unique_id=62487246]
 visible = false
 position = Vector2(410, 522)
-texture = ExtResource("3_6t5aa")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_x3wgy")
 
 [node name="Label" type="Label" parent="Defence" unique_id=1286210709]
 offset_left = -20.0

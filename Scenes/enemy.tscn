@@ -54,3 +54,11 @@ visible = false
 position = Vector2(650, 479.99997)
 scale = Vector2(0.31835938, 0.31835938)
 texture = ExtResource("3_afpow")
+
+[node name="Intent" type="Label" parent="." unique_id=1829195158]
+offset_left = 760.0
+offset_top = 718.0
+offset_right = 1072.0
+offset_bottom = 763.0
+theme_override_font_sizes/font_size = 32
+text = "5 BLOCK + 5 ATTACK"

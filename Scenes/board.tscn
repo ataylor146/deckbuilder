@@ -5,18 +5,14 @@
 [ext_resource type="Script" uid="uid://d35b34pvlmmfk" path="res://Scripts/card_data.gd" id="2_vjyv8"]
 [ext_resource type="PackedScene" uid="uid://bt8mo5dbelmf7" path="res://Scenes/enemy.tscn" id="3_8l818"]
 [ext_resource type="Texture2D" uid="uid://b1fviuys0ldiy" path="res://Sprites/main bg.png" id="3_bh37u"]
-[ext_resource type="Resource" uid="uid://dqgo6p3kvk5jn" path="res://cards/brace.tres" id="3_hm3vq"]
-[ext_resource type="Resource" uid="uid://pb2lvhytd7ue" path="res://cards/card_res.tres" id="4_iehwj"]
-[ext_resource type="Resource" uid="uid://l5hrj0oj4asg" path="res://cards/heavy_shot.tres" id="5_7iy1p"]
+[ext_resource type="Resource" uid="uid://c4it71i1hiccj" path="res://cards/fireball.tres" id="3_d8vyx"]
+[ext_resource type="Resource" uid="uid://crxkeedxu2315" path="res://cards/Interceptor.tres" id="4_vw4oq"]
 [ext_resource type="PackedScene" uid="uid://c13etwe3nwivd" path="res://Scenes/WinScreen.tscn" id="5_s4i1f"]
-[ext_resource type="Resource" path="res://cards/patch_up.tres" id="6_o5s4g"]
-[ext_resource type="Resource" path="res://cards/scavenge.tres" id="7_2cdyc"]
 [ext_resource type="PackedScene" uid="uid://biintfx5r5wqg" path="res://Scenes/map.tscn" id="7_twe5h"]
-[ext_resource type="Resource" uid="uid://df1xxqje3dabu" path="res://cards/strike.tres" id="8_qjv7d"]
 
 [node name="Board" type="Node2D" unique_id=687119862]
 script = ExtResource("1_8l818")
-starting_deck = Array[ExtResource("2_vjyv8")]([ExtResource("3_hm3vq"), ExtResource("4_iehwj"), ExtResource("5_7iy1p"), ExtResource("6_o5s4g"), ExtResource("7_2cdyc"), ExtResource("8_qjv7d")])
+starting_deck = Array[ExtResource("2_vjyv8")]([ExtResource("3_d8vyx"), ExtResource("4_vw4oq")])
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1389736538]
 z_index = -1
