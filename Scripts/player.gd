@@ -21,7 +21,7 @@ func take_damage(dmg: int) -> void:
 
 	hp -= dmg
 	if (hp <= 0):
-		print("LOSE")
+		get_tree().change_scene_to_file("res://Scenes/lose_scene.tscn")
 	if CANNONS != check_cannons():
 		CANNONS = check_cannons()
 		print("--------------CANNON DESTROYED! NOW YOU HAVE " + str(CANNONS) + " CANNONS -------------------")

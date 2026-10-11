@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://dxwoxvy4rqf1l"]
 
 [ext_resource type="Script" uid="uid://dgqif6xctajgt" path="res://Scripts/board.gd" id="1_8l818"]
+[ext_resource type="PackedScene" uid="uid://badu7qssc7g76" path="res://Scenes/player.tscn" id="2_bh37u"]
 [ext_resource type="Texture2D" uid="uid://dn14lajsy6sgk" path="res://Sprites/ocean.jpg" id="2_shhme"]
 [ext_resource type="PackedScene" uid="uid://bt8mo5dbelmf7" path="res://Scenes/enemy.tscn" id="3_8l818"]
 [ext_resource type="PackedScene" uid="uid://bcourr8d2yg0u" path="res://Scenes/cannon.tscn" id="4_shhme"]
+[ext_resource type="PackedScene" uid="uid://c13etwe3nwivd" path="res://Scenes/WinScreen.tscn" id="5_s4i1f"]
 
 [node name="Board" type="Node2D" unique_id=687119862]
 script = ExtResource("1_8l818")
+
+[node name="Player" parent="." unique_id=499854778 instance=ExtResource("2_bh37u")]
 
 [node name="Hand" type="Node2D" parent="." unique_id=1715343126]
 position = Vector2(564, 524)
@@ -40,5 +44,7 @@ opposing = true
 [node name="Cannon6" parent="." unique_id=1239653606 instance=ExtResource("4_shhme")]
 position = Vector2(322, 88)
 opposing = true
+
+[node name="RoundWinScene" parent="." unique_id=311131055 instance=ExtResource("5_s4i1f")]
 
 [connection signal="defeated" from="Enemy" to="." method="_on_enemy_defeated"]

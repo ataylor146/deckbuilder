@@ -1,5 +1,10 @@
 [gd_scene format=3 uid="uid://c13etwe3nwivd"]
 
+[ext_resource type="Script" uid="uid://b0wmrtv7su13g" path="res://Scenes/loot_1.gd" id="1_68w7f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yf5fn"]
+bg_color = Color(0.49173367, 0.63659364, 0.5973249, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
 bg_color = Color(0.5167997, 0.30669695, 0.18393311, 1)
 
@@ -35,6 +40,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="BG" type="Panel" parent="." unique_id=1372468068]
+layout_mode = 0
+offset_left = -78.0
+offset_top = -38.0
+offset_right = 1225.0
+offset_bottom = 752.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yf5fn")
+
 [node name="PickBonusPanel" type="Panel" parent="." unique_id=532640873]
 layout_mode = 0
 offset_left = 361.0
@@ -67,6 +80,7 @@ offset_top = 206.0
 offset_right = 349.0
 offset_bottom = 447.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_5s0fj")
+script = ExtResource("1_68w7f")
 
 [node name="Label" type="Label" parent="Loot1" unique_id=187428001]
 layout_mode = 1
