@@ -1,5 +1,5 @@
 class_name Card
-extends Button
+extends TextureButton
 
 signal cardPlaced(Card)
 

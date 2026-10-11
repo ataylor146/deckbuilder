@@ -14,7 +14,6 @@ var damage = 1
 var cannons: Array[Cannon]
 
 func _ready():
-	cannons.append_array([$Cannon, $Cannon2, $Cannon3])
 	progress_bar.max_value = MAX_HP
 	update_ui()
 

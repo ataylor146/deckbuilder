@@ -16,7 +16,6 @@ func setManpower(n: int):
 	$Manpower.text = "Manpower: " + str(n)
 
 func _ready() -> void:
-	cannons.append_array([$Cannon, $Cannon2, $Cannon3])
 	setManpower(manpowerPerRound)
 	progress_bar.max_value = MAX_HP
 	update_ui()
