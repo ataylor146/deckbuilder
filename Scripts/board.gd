@@ -170,9 +170,6 @@ func _on_enemy_defeated() -> void:
 	enemy_index += 1
 	print("enemy down!")
 	$RoundWinScene.visible = true
-	
-
-
 
 func _on_end_turn_pressed() -> void:
 	end_turn()
