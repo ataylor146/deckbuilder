@@ -13,8 +13,11 @@ func _ready() -> void:
 		Enemies[i].pressed.connect(_on_enemy_pressed.bind(i))
 
 func next_cycle() -> void:
-	create_cross()
-	index += 1
+	if index < 3:
+		create_cross()
+		index += 1
+	else:
+		get_tree().change_scene_to_file("res://Scenes/board.tscn")
 
 func create_cross():
 	var cross = cross_scene.instantiate()
