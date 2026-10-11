@@ -20,18 +20,18 @@ starting_deck = Array[ExtResource("2_vjyv8")]([ExtResource("3_hm3vq"), ExtResour
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1389736538]
 z_index = -1
-position = Vector2(570, 322.71155)
-scale = Vector2(1.1171875, 0.6322492)
+position = Vector2(589, 269)
+scale = Vector2(1.4761645, 1.4761645)
 texture = ExtResource("3_bh37u")
 
 [node name="Player" parent="." unique_id=499854778 instance=ExtResource("2_bh37u")]
-position = Vector2(-129, 158)
+position = Vector2(-38, 136)
 
 [node name="Hand" type="Node2D" parent="." unique_id=1715343126]
 position = Vector2(500, 524)
 
 [node name="Enemy" parent="." unique_id=282441340 instance=ExtResource("3_8l818")]
-position = Vector2(416, 189)
+position = Vector2(412, 120)
 
 [node name="RoundWinScene" parent="." unique_id=311131055 instance=ExtResource("5_s4i1f")]
 visible = false

@@ -9,7 +9,6 @@ var hp = MAX_HP
 var damage = 1
 @onready var progress_bar: ProgressBar = $HP
 @onready var hp_text: Label = $HP/Label
-@onready var nametag: Label = $Name
 
 var cannons: Array[Cannon]
 
@@ -27,7 +26,6 @@ func _apply_data():
 	MAX_HP = data.health
 	hp = data.health
 	damage = data.damage
-	nametag.text = data.name
 	update_ui()
 
 func take_damage(dmg: int) -> void:
