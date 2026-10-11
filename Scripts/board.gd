@@ -16,6 +16,8 @@ enum States{
 
 var state := States.PLAYER_TURN
 
+var enemy_index = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Enemy.setup(load("res://enemies/skipper.tres"))
@@ -48,11 +50,6 @@ func drawCard(data:CardData):
 	newCard.cardPlaced.connect(_on_card_card_placed)
 	arrangeHand()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):
 		drawCard(load("res://cards/heavy_shot.tres"))
@@ -60,32 +57,23 @@ func _input(event: InputEvent) -> void:
 
 func _on_card_card_placed(card:Card) -> void:
 	if card.cardType == CardData.CardType.MUNITION and card.munition != Cannon.Munition.NONE:
-		var closestCannon = find_nearest_cannon(card)
-		if closestCannon != null and closestCannon.loadedMunition == Cannon.Munition.NONE:
-			closestCannon.loadedMunition = card.munition
-			closestCannon.updateMunition()
+		if card.position.y < 200:
 			$Player.setManpower($Player.manpower - card.cost)
 			card.queue_free()
 			cardsInHand.erase(card)
 			arrangeHand()
+			_damage_enemy(card.data.amount)
 			#IF WE SHOT -> Audio.sfx(Audio.LOADGUN)
-
-func find_nearest_cannon(card:Card) -> Cannon:
-	var nearest: Cannon = $Player.cannons[0]
-	for i in $Player.cannons:
-		if i.position.distance_to(card.position) < nearest.position.distance_to(card.position):
-			nearest = i
-	if nearest.position.distance_to(card.position) < 200:
-		return nearest
-	else:
-		return null
 
 
 func _damage_enemy(amount:int) -> void:
 	$Enemy.take_damage(amount)
 
 func _on_enemy_defeated() -> void:
-	#IF ENEMY INDEX == 5: Audio.sfx(Audio.CELEBRATION)
+	if enemy_index == 4:
+		Audio.sfx(Audio.CELEBRATION)
+		# WIN GAME SCREEN
+	enemy_index += 1
 	print("enemy down!")
 	$RoundWinScene.visible = true
 	

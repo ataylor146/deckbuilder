@@ -2,48 +2,28 @@
 
 [ext_resource type="Script" uid="uid://dgqif6xctajgt" path="res://Scripts/board.gd" id="1_8l818"]
 [ext_resource type="PackedScene" uid="uid://badu7qssc7g76" path="res://Scenes/player.tscn" id="2_bh37u"]
-[ext_resource type="Texture2D" uid="uid://dn14lajsy6sgk" path="res://Sprites/ocean.jpg" id="2_shhme"]
 [ext_resource type="PackedScene" uid="uid://bt8mo5dbelmf7" path="res://Scenes/enemy.tscn" id="3_8l818"]
-[ext_resource type="PackedScene" uid="uid://bcourr8d2yg0u" path="res://Scenes/cannon.tscn" id="4_shhme"]
+[ext_resource type="Texture2D" uid="uid://b1fviuys0ldiy" path="res://Sprites/main bg.png" id="3_bh37u"]
 [ext_resource type="PackedScene" uid="uid://c13etwe3nwivd" path="res://Scenes/WinScreen.tscn" id="5_s4i1f"]
 [ext_resource type="PackedScene" uid="uid://biintfx5r5wqg" path="res://Scenes/map.tscn" id="7_twe5h"]
 
 [node name="Board" type="Node2D" unique_id=687119862]
 script = ExtResource("1_8l818")
 
+[node name="Background" type="Sprite2D" parent="." unique_id=1389736538]
+z_index = -1
+position = Vector2(570, 322.71155)
+scale = Vector2(1.1171875, 0.6322492)
+texture = ExtResource("3_bh37u")
+
 [node name="Player" parent="." unique_id=499854778 instance=ExtResource("2_bh37u")]
+position = Vector2(-129, 158)
 
 [node name="Hand" type="Node2D" parent="." unique_id=1715343126]
 position = Vector2(564, 524)
 
-[node name="Background" type="Sprite2D" parent="." unique_id=1389736538]
-position = Vector2(599, 209.00002)
-scale = Vector2(0.41928536, 0.41928533)
-texture = ExtResource("2_shhme")
-
 [node name="Enemy" parent="." unique_id=282441340 instance=ExtResource("3_8l818")]
-
-[node name="Cannon" parent="." unique_id=1691383367 instance=ExtResource("4_shhme")]
-position = Vector2(170, 489)
-
-[node name="Cannon2" parent="." unique_id=887126168 instance=ExtResource("4_shhme")]
-position = Vector2(627, 442)
-loadedMunition = 2
-
-[node name="Cannon3" parent="." unique_id=575758701 instance=ExtResource("4_shhme")]
-position = Vector2(994, 436)
-
-[node name="Cannon4" parent="." unique_id=1549919177 instance=ExtResource("4_shhme")]
-position = Vector2(700, 86)
-opposing = true
-
-[node name="Cannon5" parent="." unique_id=997904421 instance=ExtResource("4_shhme")]
-position = Vector2(1079, 106)
-opposing = true
-
-[node name="Cannon6" parent="." unique_id=1239653606 instance=ExtResource("4_shhme")]
-position = Vector2(322, 88)
-opposing = true
+position = Vector2(416, 189)
 
 [node name="RoundWinScene" parent="." unique_id=311131055 instance=ExtResource("5_s4i1f")]
 visible = false

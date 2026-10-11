@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://l5hrj0oj4asg"]
 
 [ext_resource type="Script" uid="uid://d35b34pvlmmfk" path="res://Scripts/card_data.gd" id="1_cd"]
-[ext_resource type="Texture2D" uid="uid://bk3kxd6e6wtwn" path="res://Sprites/cannonball_PNG18-2072353241.png" id="1_jirl3"]
+[ext_resource type="Texture2D" uid="uid://d21pyusho2kvb" path="res://Sprites/IMG_0229.PNG" id="1_hhaq0"]
 [ext_resource type="AudioStream" uid="uid://drivvwk700ry8" path="res://Sounds/gunshot2.wav" id="3_hhaq0"]
 
 [resource]
@@ -10,5 +10,5 @@ cardName = "HeavyShot"
 manaCost = 2
 amount = 11
 munition = 1
-art = ExtResource("1_jirl3")
+art = ExtResource("1_hhaq0")
 sound = ExtResource("3_hhaq0")

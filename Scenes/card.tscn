@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://n5t8ijhylxrg" path="res://Scripts/card.gd" id="1_wf8id"]
 [ext_resource type="Texture2D" uid="uid://ds76jbuigsfso" path="res://Sprites/icon.svg" id="2_brehn"]
+[ext_resource type="Texture2D" uid="uid://c57een3r6rq5r" path="res://Sprites/IMG_0230.PNG" id="2_eumee"]
 
 [node name="Card" type="Button" unique_id=1031192252]
 offset_left = -72.0
@@ -9,6 +10,11 @@ offset_top = -128.0
 offset_right = 84.0
 offset_bottom = 155.0
 script = ExtResource("1_wf8id")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=335401750]
+position = Vector2(535.5, 710.5)
+scale = Vector2(0.15527344, 0.15527344)
+texture = ExtResource("2_eumee")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=81723631]
 layout_mode = 0

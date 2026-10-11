@@ -30,11 +30,11 @@ texture = ExtResource("1_c7s6e")
 
 [node name="Enemy1" type="TextureButton" parent="." unique_id=1897970298]
 layout_mode = 0
-offset_left = 457.0
-offset_top = 101.0
-offset_right = 2377.0
-offset_bottom = 1473.0
-scale = Vector2(0.07, 0.07)
+offset_left = 452.0
+offset_top = 96.0
+offset_right = 2372.0
+offset_bottom = 1468.0
+scale = Vector2(0.06, 0.06)
 disabled = true
 texture_normal = ExtResource("2_26yhd")
 
@@ -44,38 +44,38 @@ offset_left = 640.0
 offset_top = 80.0
 offset_right = 2560.0
 offset_bottom = 1452.0
-scale = Vector2(0.07, 0.07)
+scale = Vector2(0.06, 0.06)
 disabled = true
 texture_normal = ExtResource("2_26yhd")
 
 [node name="Enemy3" type="TextureButton" parent="." unique_id=1808087474]
 layout_mode = 0
-offset_left = 624.0
-offset_top = 208.0
-offset_right = 2544.0
-offset_bottom = 1580.0
-scale = Vector2(0.07, 0.07)
+offset_left = 635.00006
+offset_top = 214.0
+offset_right = 2555.0
+offset_bottom = 1586.0
+scale = Vector2(0.06, 0.06)
 disabled = true
 texture_normal = ExtResource("2_26yhd")
 flip_h = true
 
 [node name="Enemy4" type="TextureButton" parent="." unique_id=440145590]
 layout_mode = 0
-offset_left = 447.0
-offset_top = 281.0
-offset_right = 2367.0
-offset_bottom = 1653.0
-scale = Vector2(0.07, 0.07)
+offset_left = 451.0
+offset_top = 283.0
+offset_right = 2371.0
+offset_bottom = 1655.0
+scale = Vector2(0.06, 0.06)
 disabled = true
 texture_normal = ExtResource("2_26yhd")
 flip_h = true
 
 [node name="Enemy5" type="TextureButton" parent="." unique_id=235517439]
 layout_mode = 0
-offset_left = 622.0
-offset_top = 404.0
-offset_right = 2542.0
-offset_bottom = 1776.0
-scale = Vector2(0.07, 0.07)
+offset_left = 627.0
+offset_top = 395.0
+offset_right = 2547.0
+offset_bottom = 1767.0
+scale = Vector2(0.06, 0.06)
 disabled = true
 texture_normal = ExtResource("2_26yhd")
