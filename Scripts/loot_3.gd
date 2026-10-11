@@ -7,7 +7,7 @@ func _ready() -> void:
 	pressed.connect(_on_pressed)
 
 func _on_pressed() -> void:
-	print("YOU GOT +1 MANA PER TURN OR OTHER BONUS IDK")
+	print("YOU GOT +1 HAND SIZE")
 	$"../..".HAND_SIZE += 1;
 	$"../../Enemy".setup(load("res://enemies/skipper.tres"))
 	$"../../Map".visible = true

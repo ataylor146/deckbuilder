@@ -162,10 +162,10 @@ func _damage_enemy(amount:int) -> void:
 	$Enemy.take_damage(amount)
 
 func _on_enemy_defeated() -> void:
-	if enemy_index == 4:
+	if enemy_index == 2:
 		Audio.sfx(Audio.CELEBRATION)
 		print("WIN")
-		get_tree().change_scene_to_file("res://Scenes/lose_scene.tscn")
+		get_tree().change_scene_to_file("res://Scenes/victory_screen.tscn")
 		# CHANGE TO WIN SCREEN
 		# WIN GAME SCREEN
 	enemy_index += 1
