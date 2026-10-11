@@ -28,7 +28,7 @@ texture = ExtResource("3_bh37u")
 position = Vector2(-129, 158)
 
 [node name="Hand" type="Node2D" parent="." unique_id=1715343126]
-position = Vector2(564, 524)
+position = Vector2(500, 524)
 
 [node name="Enemy" parent="." unique_id=282441340 instance=ExtResource("3_8l818")]
 position = Vector2(416, 189)

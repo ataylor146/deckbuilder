@@ -2,6 +2,8 @@ extends Node2D
 
 const handWidth := 300.0
 const typicalHandSpread := 50.0
+const arcHeight := 8.0
+const cardTilt := 4.0
 
 var n_card:PackedScene =  load("res://Scenes/card.tscn")
 var n_cannon:PackedScene = load("res://Scenes/cannon.tscn")
@@ -43,6 +45,7 @@ func end_turn() -> void:
 	
 func take_turn():
 	$Player.block = 0
+	$Player.update_block_ui()
 	$Player.setManpower($Player.manpowerPerRound)
 	refillHand()
 
@@ -63,21 +66,24 @@ func drawFromPile() -> bool:
 	
 func handPositions(count: int) -> Array[Vector2]:
 	var result: Array[Vector2]
-	var spread: float
-	if count * typicalHandSpread < handWidth:
-		spread = typicalHandSpread
-	else:
-		spread = handWidth / count
-	
+	var spread: float = min(typicalHandSpread, handWidth / max(count, 1))
+
 	for i in range(count):
-		result.append($Hand.position + Vector2(i * spread, 0.0))
+		var t: float = i - (count - 1) / 2.0
+		result.append($Hand.position + Vector2(t * spread, arcHeight * t * t))
 	return result
 
 func arrangeHand() -> void:
-	var positions = handPositions(cardsInHand.size())
-	for i in range(cardsInHand.size()):
-		cardsInHand[i].homePosition = positions[i]
-		cardsInHand[i].disabled = cardsInHand[i].cost > $Player.manpower
+	var count := cardsInHand.size()
+	var positions := handPositions(count)
+
+	for i in range(count):
+		var card := cardsInHand[i]
+		var t: float = i - (count - 1) / 2.0
+		card.homePosition = positions[i]
+		card.homeRotation = deg_to_rad(t * cardTilt)
+		card.z_index = i
+		card.disabled = card.cost > $Player.manpower
 
 func drawCard(data:CardData):
 	var newCard:Card = n_card.instantiate()
@@ -103,7 +109,7 @@ func _on_card_card_placed(card: Card) -> void:
 		CardData.CardType.ATTACK:
 			_damage_enemy(card.data.amount)
 		CardData.CardType.DEFENSE:
-			$Player.block += card.data.amount
+			$Player.add_block(card.data.amount)
 		CardData.CardType.EFFECT:
 			_apply_effect(card.data)
 

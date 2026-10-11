@@ -7,6 +7,9 @@ var CANNONS = 3
 var hp = MAX_HP
 var block = 0
 
+@onready var defence: Sprite2D = $Defence
+@onready var defence_text: Label = $Defence/Label
+
 @onready var progress_bar: ProgressBar = $HP
 @onready var hp_text: Label = $HP/Label
 var cannons: Array[Cannon]
@@ -36,6 +39,19 @@ func take_damage(dmg: int) -> void:
 func heal(value: int) -> void:
 	hp = min(hp + value, MAX_HP)
 	update_ui()
+
+func add_block(value: int) -> void:
+	block += value
+	update_block_ui()
+
+func update_block_ui():
+	print(block)
+	if block == 0:
+		defence.visible = false
+		return
+	if defence.visible == false:
+		defence.visible = true
+	defence_text.text = str(block)
 
 func repair_cannons(value: int) -> void:
 	CANNONS = min(CANNONS + value, 3)

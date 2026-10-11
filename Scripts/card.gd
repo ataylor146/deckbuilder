@@ -7,11 +7,11 @@ var grabPos : Vector2
 var formerPos : Vector2
 var formerZ: int
 var data : CardData
-var munition: Cannon.Munition
 var cardType: CardData.CardType
 var cost: int
 
 @export var homePosition : Vector2
+var homeRotation: float
 
 
 func setup(card_data:CardData):
@@ -22,13 +22,16 @@ func setup(card_data:CardData):
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_apply_data()
+	pivot_offset = size / 2.0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if button_pressed:
 		position = formerPos + get_global_mouse_position() - grabPos
+		rotation = lerp_angle(rotation, 0.0, delta * 15.0)
 	else:
-		position = homePosition
+		position = position.lerp(homePosition, delta * 15.0)
+		rotation = lerp_angle(rotation, homeRotation, delta * 15.0)
 
 func _on_button_down() -> void:
 	grabPos = get_global_mouse_position()
